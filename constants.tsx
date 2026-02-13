@@ -12,127 +12,184 @@ export const BUSINESS_INFO = {
 };
 
 export const PRODUCTS: Product[] = [
-  // Automotive Art
+  // PAINTINGS (€200)
   {
-    id: "a1",
-    name: { en: "Vintage V12 Engine Engraving", ro: "Gravură Motor V12 Vintage" },
-    description: { en: "Intricate steel engraving of a legendary performance engine.", ro: "Gravură detaliată pe oțel a unui motor legendar de înaltă performanță." },
-    price: 450,
+    id: "p1",
+    name: { en: "Night Drive - Honda Type R", ro: "Cursă de Noapte - Honda Type R" },
+    description: { 
+        en: "3D mixed media painting featuring a blue Honda Type R model navigating a textured mountain pass under a golden moon.", 
+        ro: "Pictură 3D mixed media cu un model Honda Type R albastru parcurgând o trecătoare montană texturată sub o lună aurie." 
+    },
+    price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://picsum.photos/seed/engine1/600/800"
+    image: "https://images.unsplash.com/photo-1617469767053-d3b523a0b982?auto=format&fit=crop&q=80&w=800"
   },
   {
-    id: "a2",
-    name: { en: "Minimalist Porsche 911 Outline", ro: "Contur Porsche 911 Minimalist" },
-    description: { en: "Precision cut aluminum silhouette of the iconic 911.", ro: "Siluetă din aluminiu tăiată cu precizie a iconicului 911." },
-    price: 320,
+    id: "p2",
+    name: { en: "BMW X6 Abstract Splatter", ro: "BMW X6 Abstract Splatter" },
+    description: { 
+        en: "Dynamic silver BMW X6 model centered on a dark canvas with energetic gold, red, and green paint splatters.", 
+        ro: "Model argintiu BMW X6 centrat pe o pânză închisă, cu stropi energetici de vopsea aurie, roșie și verde." 
+    },
+    price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://picsum.photos/seed/porsche/600/800"
+    image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800"
   },
   {
-    id: "a3",
-    name: { en: "F1 Steering Wheel Sculpture", ro: "Sculptură Volan Formula 1" },
-    description: { en: "Full-scale metal replica of a modern racing steering wheel.", ro: "Replică metalică la scară reală a unui volan de curse modern." },
-    price: 780,
+    id: "p3",
+    name: { en: "Golden Bicycle Study", ro: "Studiu Bicicletă Aurie" },
+    description: { 
+        en: "Striking yellow bicycle set against a deep textured background with metallic gold accents and dark grit.", 
+        ro: "Bicicletă galbenă vibrantă pe un fundal texturat profund, cu accente metalice aurii și texturi industriale." 
+    },
+    price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://picsum.photos/seed/steering/600/800"
+    image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&q=80&w=800"
   },
   {
-    id: "a4",
-    name: { en: "The Gearhead's Clock", ro: "Ceasul Pasionatului Auto" },
-    description: { en: "Industrial wall clock made from reclaimed transmission parts.", ro: "Ceas industrial de perete realizat din componente de transmisie recondiționate." },
-    price: 210,
+    id: "p4",
+    name: { en: "G-Wagon Abstract Horizon", ro: "G-Wagon Orizont Abstract" },
+    description: { 
+        en: "Black Mercedes G-Class surrounded by chaotic, expressive brushstrokes of crimson and emerald on a dark field.", 
+        ro: "Mercedes G-Class negru înconjurat de pensulații haotice și expresive de roșu și smarald pe un fundal întunecat." 
+    },
+    price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://picsum.photos/seed/clock/600/800"
+    image: "https://images.unsplash.com/photo-1520050206274-a1af446338cb?auto=format&fit=crop&q=80&w=800"
   },
   {
-    id: "a5",
-    name: { en: "Cylinder Head Coffee Table", ro: "Măsuță de Cafea Chiuloasă" },
-    description: { en: "Large glass-top table supported by a polished engine block.", ro: "Masă mare cu blat de sticlă susținută de un bloc motor polișat." },
-    price: 1200,
+    id: "p5",
+    name: { en: "Mercedes G Midnight Drift", ro: "Mercedes G Drift de Miezul Nopții" },
+    description: { 
+        en: "Dramatic white paint arc simulating a high-speed drift from a black G-Wagon on a dark, industrial background.", 
+        ro: "Arc dramatic de vopsea albă simulând un drift de mare viteză al unui G-Wagon negru pe un fundal industrial." 
+    },
+    price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://picsum.photos/seed/table/600/800"
+    image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800"
   },
-  {
-    id: "a6",
-    name: { en: "Abstract Turbocharger Print", ro: "Tablou Abstract Turbosuflantă" },
-    description: { en: "High-contrast metal print featuring a turbo assembly.", ro: "Print pe metal cu contrast ridicat reprezentând un ansamblu turbo." },
-    price: 180,
-    category: Category.AUTOMOTIVE,
-    image: "https://picsum.photos/seed/turbo/600/800"
-  },
-  {
-    id: "a7",
-    name: { en: "Classic Grille Wall Art", ro: "Decor Perete Grilaj Clasic" },
-    description: { en: "Hand-welded representation of a 1950s front grille.", ro: "Reprezentare sudată manual a unei grile frontale din anii '50." },
-    price: 540,
-    category: Category.AUTOMOTIVE,
-    image: "https://picsum.photos/seed/grille/600/800"
-  },
-  {
-    id: "a8",
-    name: { en: "Spark Plug Chess Set", ro: "Set de Șah din Bujii" },
-    description: { en: "Full chess set with pieces crafted from custom spark plugs.", ro: "Set de șah complet cu piese realizate din bujii personalizate." },
-    price: 390,
-    category: Category.AUTOMOTIVE,
-    image: "https://picsum.photos/seed/chess/600/800"
-  },
-  // Figurines
+
+  // FIGURINES (€700 - €1000)
   {
     id: "f1",
-    name: { en: "The Welder", ro: "Sudorul" },
-    description: { en: "A dynamic figurine of an artisan at work, made from nuts and bolts.", ro: "O figurină dinamică a unui artizan la lucru, realizată din șuruburi și piulițe." },
-    price: 125,
+    name: { en: "The Textured Angel", ro: "Îngerul Texturat" },
+    description: { 
+        en: "Industrial metal angel with cavernous, heavily welded wings and a delicate wire-mesh robe.", 
+        ro: "Înger din metal industrial cu aripi masive sudate și o robă delicată din plasă metalică." 
+    },
+    price: 850,
     category: Category.FIGURINES,
-    image: "https://picsum.photos/seed/welder/600/800"
+    image: "https://images.unsplash.com/photo-1554188248-986adbb73be4?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "f2",
-    name: { en: "Metallic Saxophonist", ro: "Saxofonist Metalic" },
-    description: { en: "Abstract metal figure capturing the soul of jazz.", ro: "Figură metalică abstractă ce surprinde sufletul jazz-ului." },
-    price: 145,
+    name: { en: "Industrial Guitar Clock", ro: "Ceas Chitară Industrială" },
+    description: { 
+        en: "Functional timepiece built into a guitar sculpture crafted from bicycle chains, gears, and bolts.", 
+        ro: "Ceas funcțional integrat într-o sculptură de chitară realizată din lanțuri de bicicletă, roți dințate și șuruburi." 
+    },
+    price: 950,
     category: Category.FIGURINES,
-    image: "https://picsum.photos/seed/sax/600/800"
+    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "f3",
-    name: { en: "Iron Horse (Small)", ro: "Cal de Fier (Mic)" },
-    description: { en: "An elegant equine sculpture crafted from chain links.", ro: "O sculptură ecvină elegantă realizată din zale de lanț." },
-    price: 185,
+    name: { en: "Minimalist Metal Angel", ro: "Înger Metalic Minimalist" },
+    description: { 
+        en: "A sleek, contemporary angel figurine with polished metal wings and a clean silhouette.", 
+        ro: "Figurină de înger contemporană, cu aripi din metal polișat și o siluetă curată." 
+    },
+    price: 700,
     category: Category.FIGURINES,
-    image: "https://picsum.photos/seed/horse/600/800"
+    image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "f4",
-    name: { en: "Cybernetic Owl", ro: "Bufniță Cibernetică" },
-    description: { en: "A wise night hunter rendered in gears and washers.", ro: "O bufniță înțeleaptă realizată din roți dințate și șaibe." },
-    price: 210,
+    name: { en: "The Chain of Burden", ro: "Lanțul Poverii" },
+    description: { 
+        en: "A metal figure straining to pull a natural stone using a heavy industrial chain, signifying perseverance.", 
+        ro: "O figurină metalică ce depune efort pentru a trage o piatră naturală cu un lanț industrial greu, simbolizând perseverența." 
+    },
+    price: 750,
     category: Category.FIGURINES,
-    image: "https://picsum.photos/seed/owl/600/800"
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "f5",
-    name: { en: "The Thinker (Nut & Bolt)", ro: "Gânditorul (Șuruburi)" },
-    description: { en: "A metal reimagining of Rodin's masterpiece.", ro: "O reinterpretare metalică a capodoperei lui Rodin." },
-    price: 110,
+    name: { en: "Lunar Ritual Gathering", ro: "Adunarea Ritualului Lunar" },
+    description: { 
+        en: "An intricate scene of wire-mesh figures connected by chains standing before an illuminated lunar surface.", 
+        ro: "O scenă complexă de figurine din plasă metalică conectate prin lanțuri în fața unei suprafețe lunare iluminate." 
+    },
+    price: 1000,
     category: Category.FIGURINES,
-    image: "https://picsum.photos/seed/thinker/600/800"
+    image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "f6",
-    name: { en: "Medieval Knight Figurine", ro: "Figurină Cavaler Medieval" },
-    description: { en: "Sturdy knight with a shield made from industrial scrap.", ro: "Cavaler robust cu scut realizat din deșeuri industriale." },
-    price: 165,
+    name: { en: "The Reader on Gear", ro: "Cititorul pe Roata Dințată" },
+    description: { 
+        en: "A serene wire-mesh figure reading a book, seated atop a large weathered industrial gear.", 
+        ro: "O figurină senină din plasă metalică citind o carte, așezată pe o roată dințată industrială mare." 
+    },
+    price: 800,
     category: Category.FIGURINES,
-    image: "https://picsum.photos/seed/knight/600/800"
+    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "f7",
-    name: { en: "Biker Sculpture", ro: "Sculptură Motociclist" },
-    description: { en: "Feel the speed in this lean, mean metal machine.", ro: "Simte viteza în această mașinărie metalică zveltă." },
-    price: 250,
+    name: { en: "Spirit of Motion", ro: "Spiritul Mișcării" },
+    description: { 
+        en: "Abstract wire figure mounted on a gear base, capturing a sense of flight or dynamic energy.", 
+        ro: "Figură abstractă din sârmă montată pe o bază de roată dințată, capturând un sentiment de zbor sau energie dinamică." 
+    },
+    price: 800,
     category: Category.FIGURINES,
-    image: "https://picsum.photos/seed/biker/600/800"
+    image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: "f8",
+    name: { en: "Tree of Iron Life", ro: "Copacul Vieții de Fier" },
+    description: { 
+        en: "Figurine with branching, root-like extensions from the head, blending organic form with industrial metal.", 
+        ro: "Figurină cu extensii ramificate asemănătoare rădăcinilor, îmbinând forma organică cu metalul industrial." 
+    },
+    price: 850,
+    category: Category.FIGURINES,
+    image: "https://images.unsplash.com/photo-1444491741275-3747c53c99b4?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: "f9",
+    name: { en: "Legend of the Sword", ro: "Legenda Sabiei" },
+    description: { 
+        en: "A wire-sculpted warrior kneeling before a polished steel sword embedded in a raw stone base.", 
+        ro: "Un războinic sculptat din sârmă îngenuncheat în fața unei săbii din oțel polișat înfiptă într-o bază de piatră brută." 
+    },
+    price: 900,
+    category: Category.FIGURINES,
+    image: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: "f10",
+    name: { en: "The Chain Bull", ro: "Taurul din Lanțuri" },
+    description: { 
+        en: "A robust bull sculpture built entirely from transmission chains, sprockets, and mechanical scrap.", 
+        ro: "O sculptură robustă de taur realizată integral din lanțuri de transmisie, pinioane și deșeuri mecanice." 
+    },
+    price: 950,
+    category: Category.FIGURINES,
+    image: "https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: "f11",
+    name: { en: "Mesh Figure - Contemplation", ro: "Figurină Plasă - Contemplare" },
+    description: { 
+        en: "Seated wire-mesh figure showing the unique transparency and texture achieved through hand-weaving metal.", 
+        ro: "Figurină așezată din plasă metalică ce arată transparența și textura unică obținute prin țeserea manuală a metalului." 
+    },
+    price: 800,
+    category: Category.FIGURINES,
+    image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&q=80&w=800"
   }
 ];
 
