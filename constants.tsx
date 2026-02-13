@@ -28,8 +28,8 @@ export const PRODUCTS: Product[] = [
     id: "p2",
     name: { en: "BMW X6 Silver Splatter", ro: "BMW X6 Silver Splatter" },
     description: { 
-        en: "Dynamic silver BMW X6 scale model centered on a dark grey canvas with energetic splatters in ruby red and gold.", 
-        ro: "Model la scară BMW X6 argintiu dinamic centrat pe o pânză gri închis cu stropi energetici în roșu rubin și aur." 
+        en: "Dynamic silver BMW X6 scale model centered on a dark grey canvas with energetic splatters in ruby red, emerald green, and gold.", 
+        ro: "Model la scară BMW X6 argintiu dinamic centrat pe o pânză gri închis cu stropi energetici în roșu rubin, verde smarald și aur." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
@@ -39,8 +39,8 @@ export const PRODUCTS: Product[] = [
     id: "p3",
     name: { en: "Industrial Yellow Bicycle", ro: "Bicicleta Galbenă Industrială" },
     description: { 
-        en: "An intricate yellow miniature bicycle poised against a rich, dark background flowing with metallic gold textures.", 
-        ro: "O bicicletă galbenă miniaturală complexă așezată pe un fundal întunecat cu texturi de aur metalic." 
+        en: "An intricate yellow miniature bicycle poised against a rich, dark background flowing with metallic gold and deep black textures.", 
+        ro: "O bicicletă galbenă miniaturală complexă așezată pe un fundal întunecat și bogat, cu texturi de aur metalic și negru profund." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
@@ -50,8 +50,8 @@ export const PRODUCTS: Product[] = [
     id: "p4",
     name: { en: "Mercedes G-Class 'BANIER'", ro: "Mercedes G-Class 'BANIER'" },
     description: { 
-        en: "A black Mercedes G-Class scale model set against a chaotic abstract background with the bold 'BANIER' lettering.", 
-        ro: "Un model la scară Mercedes G-Class negru așezat pe un fundal abstract haotic cu inscripția 'BANIER'." 
+        en: "A black Mercedes G-Class scale model set against an expressive abstract background of red and green strokes with bold 'BANIER' industrial lettering.", 
+        ro: "Un model la scară Mercedes G-Class negru așezat pe un fundal abstract expresiv de pensulații roșii și verzi, cu inscripția industrială 'BANIER'." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
@@ -61,8 +61,8 @@ export const PRODUCTS: Product[] = [
     id: "p5",
     name: { en: "G-Class White Arc Drift", ro: "G-Class Drift Arc Alb" },
     description: { 
-        en: "Black G-Wagon scale model appearing to drift with a massive, 3D-textured white paint arc simulating tire smoke.", 
-        ro: "Model la scară G-Wagon negru ce pare să facă drift cu un arc masiv de vopsea albă texturată simulând fumul." 
+        en: "The ultimate representation of power: a black G-Wagon appearing to drift with a massive, 3D-textured white paint arc simulating high-speed energy.", 
+        ro: "Reprezentarea supremă a puterii: un model G-Wagon negru ce pare să facă drift cu un arc masiv de vopsea albă texturată 3D, simulând energia vitezei." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
@@ -74,8 +74,8 @@ export const PRODUCTS: Product[] = [
     id: "f1",
     name: { en: "The Mesh Guardian Angel", ro: "Îngerul Păzitor din Plasă" },
     description: { 
-        en: "A guardian angel with a polished black sphere head and massive wings crafted from heavily welded iron.", 
-        ro: "Un înger păzitor cu cap din sferă neagră și aripi masive din fier sudat." 
+        en: "A haunting guardian angel featuring a polished black sphere for a head, massive heavily-welded textured wings, and a delicate mesh gown.", 
+        ro: "Un înger păzitor cu cap din sferă neagră lustruită, aripi masive din fier sudat și texturat, și o robă delicată din plasă." 
     },
     price: 850,
     category: Category.FIGURINES,
@@ -85,8 +85,8 @@ export const PRODUCTS: Product[] = [
     id: "f2",
     name: { en: "Minimalist Plate Angel", ro: "Înger Minimalist din Placă" },
     description: { 
-        en: "Contemporary interpretation of an angel using flat metal plates for wings on an elegant rod silhouette.", 
-        ro: "Interpretare contemporană a unui înger folosind plăci metalice plate pentru aripi." 
+        en: "A sleek contemporary interpretation of an angel using hand-cut metal plates for wings attached to a slender iron rod silhouette.", 
+        ro: "O interpretare contemporană elegantă a unui înger, folosind plăci metalice tăiate manual pentru aripi, atașate unei siluete din tijă de fier." 
     },
     price: 700,
     category: Category.FIGURINES,
@@ -96,8 +96,8 @@ export const PRODUCTS: Product[] = [
     id: "f3",
     name: { en: "Grand Central Guitar Clock", ro: "Ceas Chitară Grand Central" },
     description: { 
-        en: "Full-scale industrial guitar made of bicycle chains, featuring a functional 'Grand Central' clock face.", 
-        ro: "Chitară industrială din lanțuri de bicicletă, având în centru un ceas 'Grand Central'." 
+        en: "A full-scale industrial guitar sculpture made of bicycle chains, nuts, and bolts, featuring a functional 'Grand Central Terminal' clock face.", 
+        ro: "O sculptură de chitară industrială la scară reală, realizată din lanțuri de bicicletă, piulițe și șuruburi, cu un ceas funcțional 'Grand Central Terminal'." 
     },
     price: 980,
     category: Category.FIGURINES,
@@ -107,8 +107,8 @@ export const PRODUCTS: Product[] = [
     id: "f4",
     name: { en: "The Burden of Sisyphus", ro: "Povara lui Sisif" },
     description: { 
-        en: "A figure made from welded chain links straining to pull a natural stone across a steel base.", 
-        ro: "O figurină din zale de lanț sudate ce se străduiește să tragă o piatră naturală." 
+        en: "A powerful representation of effort, showing a figure made from welded chain links straining to pull a natural stone across a steel base.", 
+        ro: "O reprezentare puternică a efortului, arătând o figurină din zale de lanț sudate ce se străduiește să tragă o piatră naturală pe o bază de oțel." 
     },
     price: 750,
     category: Category.FIGURINES,
@@ -118,8 +118,8 @@ export const PRODUCTS: Product[] = [
     id: "f5",
     name: { en: "Triple Figure Lunar Ritual", ro: "Ritual Lunar - Trei Figuri" },
     description: { 
-        en: "Three wire-mesh figures connected by chains standing before a large glowing moon installation.", 
-        ro: "Trei figurine din plasă de sârmă stând în fața unei instalații mari cu lună luminată." 
+        en: "Three wire-mesh figures connected by chains in a ritual formation standing before a large, glowing full moon installation.", 
+        ro: "Trei figurine din plasă de sârmă conectate prin lanțuri într-o formație ritualică, stând în fața unei instalații mari cu lună plină luminată." 
     },
     price: 1000,
     category: Category.FIGURINES,
@@ -129,8 +129,8 @@ export const PRODUCTS: Product[] = [
     id: "f6",
     name: { en: "The Scholar on Gear", ro: "Cărturarul pe Roată Dințată" },
     description: { 
-        en: "Delicate wire figure reading a metal book while perched on a heavy industrial gear base.", 
-        ro: "Figurină din sârmă citind o carte metalică, cocoțată pe o roată dințată industrială." 
+        en: "A delicate mesh figure hand-woven from wire, deeply immersed in reading a small metal book while perched on a salvaged industrial gear.", 
+        ro: "O figurină delicată din plasă de sârmă, absorbită de citirea unei mici cărți metalice, cocoțată pe o roată dințată industrială recuperată." 
     },
     price: 820,
     category: Category.FIGURINES,
@@ -140,8 +140,8 @@ export const PRODUCTS: Product[] = [
     id: "f7",
     name: { en: "The Flying Spirit", ro: "Spiritul Zburător" },
     description: { 
-        en: "A wire figure with a dynamic mesh cape captured in mid-leap, symbolizing industrial freedom.", 
-        ro: "O figurină din sârmă cu o pelerină din plasă capturată într-un salt, simbolizând libertatea." 
+        en: "A dynamic wire figure with a flowing mesh cape captured in a leap of faith, mounted on an industrial sprocket base.", 
+        ro: "O figurină din sârmă cu o pelerină din plasă fluidă, capturată într-un salt, montată pe un soclu din pinion industrial." 
     },
     price: 800,
     category: Category.FIGURINES,
@@ -151,8 +151,8 @@ export const PRODUCTS: Product[] = [
     id: "f8",
     name: { en: "Tree of Iron Thought", ro: "Arborele Gândului de Fier" },
     description: { 
-        en: "A head silhouette with complex, neural-like branches made of hand-twisted wire.", 
-        ro: "O siluetă de cap cu ramificații complexe asemănătoare căilor neurale din sârmă." 
+        en: "A surreal head silhouette with complex, neural-like branches made of hand-twisted wire, symbolizing the growth of ideas.", 
+        ro: "O sculptură suprarealistă de cap cu ramificații complexe asemănătoare căilor neurale, realizate din sârmă răsucită manual." 
     },
     price: 850,
     category: Category.FIGURINES,
@@ -162,8 +162,8 @@ export const PRODUCTS: Product[] = [
     id: "f9",
     name: { en: "Kneeling Paladin", ro: "Paladin Îngenuncheat" },
     description: { 
-        en: "A wire warrior figure kneeling before a vertical steel sword embedded in a stone base.", 
-        ro: "O figurină de războinic din sârmă îngenuncheată în fața unei săbii de oțel înfipte în piatră." 
+        en: "A wire warrior figure kneeling in deep reverence before a vertical steel sword embedded in a raw stone base.", 
+        ro: "O figurină de războinic din sârmă îngenuncheată în semn de respect în fața unei săbii de oțel înfipte în piatră naturală." 
     },
     price: 900,
     category: Category.FIGURINES,
@@ -173,8 +173,8 @@ export const PRODUCTS: Product[] = [
     id: "f10",
     name: { en: "The Industrial Bull", ro: "Taurul Industrial" },
     description: { 
-        en: "A robust bull sculpture composed of heavy-duty drive chains and large industrial sprockets.", 
-        ro: "O sculptură de taur robustă compusă din lanțuri de transmisie și pinioane industriale." 
+        en: "A robust bull sculpture composed of heavy-duty drive chains and large industrial sprockets on a raw metal base.", 
+        ro: "O sculptură de taur robustă compusă din lanțuri de transmisie grele și pinioane industriale mari pe o bază de metal brut." 
     },
     price: 950,
     category: Category.FIGURINES,
@@ -184,8 +184,8 @@ export const PRODUCTS: Product[] = [
     id: "f11",
     name: { en: "Seated Contemplation", ro: "Contemplare Așezată" },
     description: { 
-        en: "A figure crafted from layered wire and mesh, sitting in a thoughtful pose on a circular gear.", 
-        ro: "O figurină realizată din straturi de sârmă și plasă, stând într-o poză gânditoare." 
+        en: "A mesh figure sitting in a thoughtful pose on a large circular industrial sprocket, representing the soul within the machine.", 
+        ro: "O figurină din plasă stând într-o poză gânditoare pe un pinion industrial circular mare, reprezentând sufletul din interiorul mașinii." 
     },
     price: 780,
     category: Category.FIGURINES,
