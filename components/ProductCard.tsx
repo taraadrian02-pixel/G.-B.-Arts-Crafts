@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Product } from '../types';
 import { useApp } from '../context/AppContext';
 import { TRANSLATIONS } from '../constants';
@@ -13,14 +13,23 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const [imageError, setImageError] = useState(false);
   const t = (key: string) => TRANSLATIONS[key][language];
 
+  // Reset error state if product image path changes
+  useEffect(() => {
+    setImageError(false);
+  }, [product.image]);
+
   return (
     <div className="group relative bg-white border border-slate-100 overflow-hidden transition-all hover:shadow-2xl">
       <div className="aspect-[3/4] overflow-hidden bg-slate-100 relative">
         {!imageError ? (
           <img 
+            key={product.image}
             src={product.image} 
             alt={product.name[language]} 
-            onError={() => setImageError(true)}
+            onError={() => {
+              console.warn(`Failed to load image: ${product.image}`);
+              setImageError(true);
+            }}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
         ) : (
@@ -31,13 +40,19 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
               {language === 'ro' ? 'Imagine Indisponibilă' : 'Image Unavailable'}
             </span>
-            <span className="text-[8px] text-slate-400 mt-1 break-all px-2">
+            <span className="text-[8px] text-slate-400 mt-2 break-all px-2 font-mono">
               {product.image}
             </span>
+            <button 
+              onClick={() => setImageError(false)}
+              className="mt-4 text-[9px] underline text-blue-600 uppercase font-bold"
+            >
+              Retry
+            </button>
           </div>
         )}
         
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none group-hover:pointer-events-auto">
           <button 
             onClick={() => addToCart(product)}
             className="px-6 py-3 bg-white text-slate-900 text-xs font-bold uppercase tracking-widest hover:bg-slate-100 transition-colors shadow-xl"

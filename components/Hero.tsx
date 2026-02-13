@@ -18,13 +18,12 @@ const Hero: React.FC = () => {
     <div className="relative h-[85vh] w-full overflow-hidden bg-slate-900">
       <div className="absolute inset-0">
         <img 
-          src="./hero_bg.jpg" 
+          src="images/p5.jpg" 
           alt="G.B. Arts & Crafts Studio"
           onError={(e) => {
-            // Fallback if local hero image is missing
             (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=1920&grayscale=true";
           }}
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
       </div>

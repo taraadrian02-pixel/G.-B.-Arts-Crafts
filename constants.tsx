@@ -11,193 +11,185 @@ export const BUSINESS_INFO = {
   facebook: "https://facebook.com/gbartscrafts",
 };
 
-/**
- * IMAGE FOLDER INSTRUCTIONS:
- * Create a folder named 'images' in your root directory.
- * Rename your files as follows:
- * - george.jpg (Artist photo)
- * - p1.jpg through p5.jpg (Paintings)
- * - f1.jpg through f11.jpg (Figurines)
- */
 export const PRODUCTS: Product[] = [
   // --- 5 PAINTINGS (€200) ---
   {
     id: "p1",
-    name: { en: "Honda Type R - Midnight Ridge", ro: "Honda Type R - Creasta de Miezul Nopții" },
+    name: { en: "Honda Type R - Midnight Relief", ro: "Honda Type R - Relief de Noapte" },
     description: { 
-        en: "3D mixed media painting featuring a blue Honda Type R navigating a textured relief mountain pass under a golden moon.", 
-        ro: "Pictură mixed media 3D cu un model Honda Type R albastru parcurgând o trecătoare montană în relief sub o lună aurie." 
+        en: "3D mixed media painting featuring a blue Honda Type R on a brown textured relief road, set under a brilliant gold leaf moon.", 
+        ro: "Pictură mixed media 3D cu un Honda Type R albastru pe un drum montan în relief, sub o lună strălucitoare din foiță de aur." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "./images/p1.jpg"
+    image: "images/p1.jpg"
   },
   {
     id: "p2",
     name: { en: "BMW X6 Silver Splatter", ro: "BMW X6 Silver Splatter" },
     description: { 
-        en: "Dynamic silver BMW X6 model centered on a dark canvas with energetic paint splatters in gold, red, and emerald.", 
-        ro: "Model BMW X6 argintiu centrat pe o pânză închisă cu stropi energetici de vopsea aurie, roșie și verde smarald." 
+        en: "Silver BMW X6 model centered on a dark canvas with high-energy splatters of red, gold, and emerald green.", 
+        ro: "Model BMW X6 argintiu centrat pe o pânză închisă cu stropi energetici de roșu, aur și verde smarald." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "./images/p2.jpg"
+    image: "images/p2.jpg"
   },
   {
     id: "p3",
-    name: { en: "The Yellow Bicycle Study", ro: "Studiu Bicicletă Galbenă" },
+    name: { en: "Industrial Yellow Bicycle", ro: "Bicicleta Galbenă Industrială" },
     description: { 
-        en: "Vibrant yellow bicycle miniature set against a deep textured background with metallic gold leaf and dark grit accents.", 
-        ro: "Miniatură de bicicletă galbenă vibrantă pe un fundal texturat profund cu foiță de aur metalică și accente de granulație închisă." 
+        en: "A vibrant yellow miniature bicycle set against a deep black background with heavy gold texture and white accents.", 
+        ro: "O miniatură de bicicletă galbenă vibrantă pe un fundal negru profund cu textură aurie densă și accente albe." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "./images/p3.jpg"
+    image: "images/p3.jpg"
   },
   {
     id: "p4",
     name: { en: "G-Class Abstract 'Banier'", ro: "G-Class Abstract 'Banier'" },
     description: { 
-        en: "Black Mercedes G-Class surrounded by expressive, chaotic brushstrokes and textured 'Banier' lettering at the base.", 
-        ro: "Mercedes G-Class negru înconjurat de pensulații haotice expresive și inscripția texturată 'Banier' la bază." 
+        en: "A black Mercedes G-Class immersed in a colorful field of red and green abstract strokes, featuring 'BANIER' industrial lettering.", 
+        ro: "Un Mercedes G-Class negru imersat într-un câmp colorat de pensulații abstracte roșii și verzi, cu litere industriale 'BANIER'." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "./images/p4.jpg"
+    image: "images/p4.jpg"
   },
   {
     id: "p5",
-    name: { en: "Mercedes G - White Arc Drift", ro: "Mercedes G - Drift Arc Alb" },
+    name: { en: "Mercedes G - The White Drift", ro: "Mercedes G - Driftul Alb" },
     description: { 
-        en: "Dramatic white paint arc simulating a high-speed drift from a black G-Wagon on an industrial dark background.", 
-        ro: "Arc dramatic de vopsea albă simulând un drift de mare viteză al unui G-Wagon negru pe un fundal industrial." 
+        en: "Minimalist yet powerful 3D drift scene with a black G-Wagon and a massive, textured white paint arc on a dark industrial background.", 
+        ro: "Scenă de drift 3D minimalistă dar puternică, cu un G-Wagon negru și un arc masiv de vopsea albă texturată pe un fundal industrial." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "./images/p5.jpg"
+    image: "images/p5.jpg"
   },
 
   // --- 11 FIGURINES (€700 - €1000) ---
   {
     id: "f1",
-    name: { en: "The Mesh Angel", ro: "Îngerul din Plasă" },
+    name: { en: "The Mesh Guardian Angel", ro: "Îngerul Păzitor din Plasă" },
     description: { 
-        en: "Industrial metal angel with a black sphere head, heavily welded textured wings, and a flowing mesh gown.", 
-        ro: "Înger din metal industrial cu cap sferic negru, aripi texturate sudate masiv și o robă fluidă din plasă." 
+        en: "Large-scale metal angel with heavy welded wings, a black polished sphere head, and a flowing wire-mesh gown.", 
+        ro: "Înger din metal la scară largă cu aripi sudate masiv, cap din sferă neagră lustruită și o robă fluidă din plasă de sârmă." 
     },
     price: 850,
     category: Category.FIGURINES,
-    image: "./images/f1.jpg"
+    image: "images/f1.jpg"
   },
   {
     id: "f2",
-    name: { en: "Minimalist Metal Angel", ro: "Înger Metalic Minimalist" },
+    name: { en: "Minimalist Plate Angel", ro: "Înger Minimalist din Placă" },
     description: { 
-        en: "Contemporary angel figurine with flat metal-plate wings and a slender industrial silhouette.", 
-        ro: "Figurină de înger contemporană cu aripi din foi de metal plate și o siluetă industrială subțire." 
+        en: "Contemporary sculpture featuring sleek, hand-bent metal plate wings and a slender industrial rod body.", 
+        ro: "Sculptură contemporană cu aripi subțiri din placă de metal îndoită manual și un corp subțire din tijă industrială." 
     },
     price: 700,
     category: Category.FIGURINES,
-    image: "./images/f2.jpg"
+    image: "images/f2.jpg"
   },
   {
     id: "f3",
     name: { en: "Grand Central Guitar Clock", ro: "Ceas Chitară Grand Central" },
     description: { 
-        en: "Intricate guitar sculpture crafted from bicycle chains and gears, featuring a functional 'Grand Central' clock face.", 
-        ro: "Sculptură de chitară complexă realizată din lanțuri de bicicletă și pinioane, cu un ceas 'Grand Central' funcțional." 
+        en: "An extraordinary piece built from bicycle chains, bolts, and gears, housing a vintage 'Grand Central Terminal' clock.", 
+        ro: "O piesă extraordinară construită din lanțuri de bicicletă, șuruburi și pinioane, adăpostind un ceas vintage 'Grand Central Terminal'." 
     },
     price: 980,
     category: Category.FIGURINES,
-    image: "./images/f3.jpg"
+    image: "images/f3.jpg"
   },
   {
     id: "f4",
-    name: { en: "The Chain of Sisyphus", ro: "Lanțul lui Sisif" },
+    name: { en: "The Burden of Sisyphus", ro: "Povara lui Sisif" },
     description: { 
-        en: "Metal figure made of welded rods and chains, captured in the act of pulling a natural stone burden.", 
-        ro: "Figurină metalică realizată din tije sudate și lanțuri, capturată în timp ce trage o piatră naturală." 
+        en: "Metal chain-link figure straining to pull a large natural beige stone, mounted on a rusted iron base.", 
+        ro: "Figurină din zale de lanț metalic străduindu-se să tragă o piatră naturală bej mare, montată pe o bază de fier ruginit." 
     },
     price: 750,
     category: Category.FIGURINES,
-    image: "./images/f4.jpg"
+    image: "images/f4.jpg"
   },
   {
     id: "f5",
     name: { en: "Triple Figure Lunar Ritual", ro: "Ritual Lunar - Trei Figuri" },
     description: { 
-        en: "Three wire-mesh figures connected by chains standing before a large, illuminated lunar backdrop.", 
-        ro: "Trei figurine din plasă de sârmă conectate prin lanțuri în fața unui fundal lunar mare, iluminat." 
+        en: "Three wire-mesh figures connected by chains in a ritual pose, standing before a giant glowing moon installation.", 
+        ro: "Trei figurine din plasă de sârmă conectate prin lanțuri într-o poză ritualică, stând în fața unei instalații cu o lună gigantă luminată." 
     },
     price: 1000,
     category: Category.FIGURINES,
-    image: "./images/f5.jpg"
+    image: "images/f5.jpg"
   },
   {
     id: "f6",
-    name: { en: "The Wire Scholar", ro: "Cărturarul din Sârmă" },
+    name: { en: "The scholar on Gear", ro: "Cărturarul pe Roată Dințată" },
     description: { 
-        en: "Delicate figure hand-woven from wire, reading a small metal book while seated on a gear foundation.", 
-        ro: "Figurină delicată țesută manual din sârmă, citind o mică carte metalică, așezată pe o bază din roată dințată." 
+        en: "Delicate wire-wrapped figure reading an open metal book, perched atop a heavy industrial gear.", 
+        ro: "Figurină delicată înfășurată în sârmă citind o carte metalică deschisă, cocoțată pe o roată dințată industrială grea." 
     },
     price: 820,
     category: Category.FIGURINES,
-    image: "./images/f6.jpg"
+    image: "images/f6.jpg"
   },
   {
     id: "f7",
-    name: { en: "Flying Spirit on Gear", ro: "Spirit Zburător pe Roată Dințată" },
+    name: { en: "Spirit of Motion", ro: "Spiritul Mișcării" },
     description: { 
-        en: "Wire-mesh figure with a cape in motion, mounted atop a weathered industrial gear base.", 
-        ro: "Figurină din plasă de sârmă cu pelerină în mișcare, montată pe o bază din roată dințată industrială." 
+        en: "Dynamic wire figure with a flowing mesh cape captured in mid-flight, mounted on a vintage sprocket.", 
+        ro: "Figurină din sârmă dinamică cu o pelerină din plasă fluidă capturată în plin zbor, montată pe un pinion vintage." 
     },
     price: 800,
     category: Category.FIGURINES,
-    image: "./images/f7.jpg"
+    image: "images/f7.jpg"
   },
   {
     id: "f8",
-    name: { en: "Tree of Thought", ro: "Copacul Gândului" },
+    name: { en: "Tree of Iron Life", ro: "Arborele Vieții de Fier" },
     description: { 
-        en: "Surreal wire sculpture featuring a figure with branching neural-like extensions from the head.", 
-        ro: "Sculptură suprarealistă din sârmă cu o figurină ale cărei extensii ramificate pornesc din cap." 
+        en: "Thought-provoking head sculpture with branching neural extensions made of hand-twisted wire.", 
+        ro: "Sculptură de cap care îndeamnă la reflexie, cu extensii neurale ramificate realizate din sârmă răsucită manual." 
     },
     price: 850,
     category: Category.FIGURINES,
-    image: "./images/f8.jpg"
+    image: "images/f8.jpg"
   },
   {
     id: "f9",
-    name: { en: "Kneeling Paladin with Sword", ro: "Paladin Îngenuncheat cu Sabie" },
+    name: { en: "Kneeling Paladin", ro: "Paladin Îngenuncheat" },
     description: { 
-        en: "Wire warrior kneeling before a steel sword embedded in a raw stone, symbolizing honor.", 
-        ro: "Războinic din sârmă îngenuncheat în fața unei săbii de oțel înfipte într-o piatră brută, simbolizând onoarea." 
+        en: "Steel warrior figure kneeling in honor before a vertical sword embedded in a natural stone base.", 
+        ro: "Figurină de războinic din oțel îngenuncheat în semn de onoare în fața unei săbii verticale înfipte într-o bază de piatră naturală." 
     },
     price: 900,
     category: Category.FIGURINES,
-    image: "./images/f9.jpg"
+    image: "images/f9.jpg"
   },
   {
     id: "f10",
-    name: { en: "The Iron Bull", ro: "Taurul de Fier" },
+    name: { en: "The Industrial Bull", ro: "Taurul Industrial" },
     description: { 
-        en: "Powerful bull sculpture constructed from heavy transmission chains, sprockets, and industrial scrap.", 
-        ro: "Sculptură puternică de taur construită din lanțuri de transmisie grele, pinioane și resturi industriale." 
+        en: "Aggressive bull sculpture crafted from heavy motorcycle chains, gears, and perforated metal plates.", 
+        ro: "Sculptură de taur agresivă realizată din lanțuri grele de motocicletă, pinioane și plăci metalice perforate." 
     },
     price: 950,
     category: Category.FIGURINES,
-    image: "./images/f10.jpg"
+    image: "images/f10.jpg"
   },
   {
     id: "f11",
-    name: { en: "Wire-Mesh Contemplation", ro: "Contemplare din Plasă" },
+    name: { en: "Mesh Contemplation", ro: "Contemplare din Plasă" },
     description: { 
-        en: "Abstract seated figure showcasing the delicate texture of hand-woven wire mesh over mechanical parts.", 
-        ro: "Figurină abstractă așezată ce prezintă textura delicată a plasei de sârmă țesute manual peste piese mecanice." 
+        en: "Abstract seated figure with wire-wrapped limbs and a mesh torso, reflecting on an industrial gear seat.", 
+        ro: "Figurină abstractă așezată cu membre înfășurate în sârmă și torace din plasă, reflectând pe un scaun din roată dințată." 
     },
     price: 780,
     category: Category.FIGURINES,
-    image: "./images/f11.jpg"
+    image: "images/f11.jpg"
   }
 ];
 
@@ -215,8 +207,8 @@ export const TRANSLATIONS: Translations = {
   checkout: { en: "Proceed to Checkout", ro: "Spre Finalizare" },
   bio_title: { en: "The Story of George Băbău", ro: "Povestea lui George Băbău" },
   bio_content: { 
-    en: "George Băbău, the heart behind G. B. Arts&Crafts, transforms cold, industrial metal into warm, evocative pieces of art. Based in the scenic town of Zărnești, George's work is inspired by his lifelong obsession with automotive engineering and the raw power of machinery. Every piece is unique, hand-welded, and infused with the spirit of craftsmanship.",
-    ro: "George Băbău, inima din spatele G. B. Arts&Crafts, transformă metalul rece și industrial în piese de artă calde și evocatoare. Stabilit în pitorescul oraș Zărnești, munca lui George este inspirată de pasiunea sa de o viață pentru ingineria auto și puterea brută a utilajelor. Fiecare piesă este unică, sudată manual și infuzată cu spiritul măiestriei."
+    en: "George Băbău, the heart behind G. B. Arts&Crafts, transforms cold, industrial metal into warm, evocative pieces of art. Based in the scenic town of Zărnești, George's work is inspired by his lifelong obsession with automotive engineering and the raw power of machinery. Every piece is unique, hand-welded, and infused with the spirit of Transylvanian craftsmanship.",
+    ro: "George Băbău, inima din spatele G. B. Arts&Crafts, transformă metalul rece și industrial în piese de artă calde și evocatoare. Stabilit în pitorescul oraș Zărnești, munca lui George este inspirată de pasiunea sa de o viață pentru ingineria auto și puterea brută a utilajelor. Fiecare piesă este unică, sudată manual și infuzată cu spiritul măiestriei transilvănene."
   },
   contact_us: { en: "Get in Touch", ro: "Contactează-ne" },
   send_message: { en: "Send Message", ro: "Trimite Mesaj" },
