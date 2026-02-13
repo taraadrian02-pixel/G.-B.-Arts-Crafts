@@ -10,7 +10,7 @@ interface CartDrawerProps {
 }
 
 const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, onCheckout }) => {
-  const { language, cart, removeFromCart, updateQuantity, cartTotal, cartCount } = useApp();
+  const { language, cart, removeFromCart, cartTotal, cartCount } = useApp();
   const t = (key: string) => TRANSLATIONS[key][language];
 
   if (!isOpen) return null;
@@ -43,29 +43,19 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, onCheckout }) 
                   <div className="flex-1">
                     <div className="flex justify-between font-medium">
                       <h3 className="text-sm text-slate-900">{item.name[language]}</h3>
-                      <p className="text-sm text-slate-900">€{item.price * item.quantity}</p>
+                      <p className="text-sm text-slate-900">€{item.price}</p>
                     </div>
                     <div className="mt-4 flex items-center justify-between">
-                      <div className="flex items-center border border-slate-200 rounded">
-                        <button 
-                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="px-2 py-1 text-slate-500 hover:text-slate-900"
-                        >
-                          -
-                        </button>
-                        <span className="px-2 text-xs font-bold text-slate-900">{item.quantity}</span>
-                        <button 
-                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="px-2 py-1 text-slate-500 hover:text-slate-900"
-                        >
-                          +
-                        </button>
+                      <div className="flex items-center">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                          {language === 'ro' ? 'Piesă Unică' : 'Unique Piece'}
+                        </span>
                       </div>
                       <button 
                         onClick={() => removeFromCart(item.id)}
                         className="text-[10px] font-bold uppercase tracking-widest text-red-600 hover:text-red-700"
                       >
-                        Remove
+                        {language === 'ro' ? 'Elimină' : 'Remove'}
                       </button>
                     </div>
                   </div>

@@ -46,9 +46,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setCart(prev => {
       const existing = prev.find(item => item.id === product.id);
       if (existing) {
-        return prev.map(item => 
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-        );
+        // Since pieces are unique, we don't increment quantity. 
+        // We just return the current state or could show a notification.
+        return prev;
       }
       return [...prev, { ...product, quantity: 1 }];
     });
@@ -59,13 +59,12 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const updateQuantity = (productId: string, quantity: number) => {
+    // For unique pieces, quantity is always 1 unless removed.
     if (quantity <= 0) {
       removeFromCart(productId);
       return;
     }
-    setCart(prev => prev.map(item => 
-      item.id === productId ? { ...item, quantity } : item
-    ));
+    // We don't allow quantity > 1.
   };
 
   const clearCart = () => setCart([]);
