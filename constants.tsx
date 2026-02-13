@@ -137,17 +137,6 @@ export const PRODUCTS: Product[] = [
     image: "https://i.ibb.co/ZRb6X5y7/f6.png"
   },
   {
-    id: "f9",
-    name: { en: "Kneeling Paladin", ro: "Paladin Îngenuncheat" },
-    description: { 
-        en: "A wire warrior figure kneeling in deep reverence before a vertical steel sword embedded in a raw stone base.", 
-        ro: "O figurină de războinic din sârmă îngenuncheată în semn de respect în fața unei săbii de oțel înfipte în piatră naturală." 
-    },
-    price: 900,
-    category: Category.FIGURINES,
-    image: "https://i.ibb.co/tMCZz4Rr/f9.png"
-  },
-  {
     id: "f10",
     name: { en: "The Industrial Bull", ro: "Taurul Industrial" },
     description: { 
@@ -168,6 +157,17 @@ export const PRODUCTS: Product[] = [
     price: 780,
     category: Category.FIGURINES,
     image: "https://i.ibb.co/B5W87cVx/f11.png"
+  },
+  {
+    id: "f9",
+    name: { en: "Kneeling Paladin", ro: "Paladin Îngenuncheat" },
+    description: { 
+        en: "A wire warrior figure kneeling in deep reverence before a vertical steel sword embedded in a raw stone base.", 
+        ro: "O figurină de războinic din sârmă îngenuncheată în semn de respect în fața unei săbii de oțel înfipte în piatră naturală." 
+    },
+    price: 900,
+    category: Category.FIGURINES,
+    image: "https://i.ibb.co/tMCZz4Rr/f9.png"
   }
 ];
 
