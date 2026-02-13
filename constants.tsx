@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
     image: "https://i.ibb.co/V07NcqS9/p5.png"
   },
 
-  // --- 11 FIGURINES (€700 - €1000) ---
+  // --- 9 FIGURINES (€700 - €1000) ---
   {
     id: "f1",
     name: { en: "The Mesh Guardian Angel", ro: "Îngerul Păzitor din Plasă" },
@@ -83,23 +83,23 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "f2",
-    name: { en: "Minimalist Plate Angel", ro: "Înger Minimalist din Placă" },
-    description: { 
-        en: "A sleek contemporary interpretation of an angel using hand-cut metal plates for wings attached to a slender iron rod silhouette.", 
-        ro: "O interpretare contemporană elegantă a unui înger, folosind plăci metalice tăiate manual pentru aripi, atașate unei siluete din tijă de fier." 
-    },
-    price: 700,
-    category: Category.FIGURINES,
-    image: "https://i.ibb.co/3yf1sksB/f2.png"
-  },
-  {
-    id: "f3",
     name: { en: "Grand Central Guitar Clock", ro: "Ceas Chitară Grand Central" },
     description: { 
         en: "A full-scale industrial guitar sculpture made of bicycle chains, nuts, and bolts, featuring a functional 'Grand Central Terminal' clock face.", 
         ro: "O sculptură de chitară industrială la scară reală, realizată din lanțuri de bicicletă, piulițe și șuruburi, cu un ceas funcțional 'Grand Central Terminal'." 
     },
     price: 980,
+    category: Category.FIGURINES,
+    image: "https://i.ibb.co/3yf1sksB/f2.png"
+  },
+  {
+    id: "f3",
+    name: { en: "Minimalist Plate Angel", ro: "Înger Minimalist din Placă" },
+    description: { 
+        en: "A sleek contemporary interpretation of an angel using hand-cut metal plates for wings attached to a slender iron rod silhouette.", 
+        ro: "O interpretare contemporană elegantă a unui înger, folosind plăci metalice tăiate manual pentru aripi, atașate unei siluete din tijă de fier." 
+    },
+    price: 700,
     category: Category.FIGURINES,
     image: "https://i.ibb.co/twGsb9fS/f3.png"
   },
@@ -135,28 +135,6 @@ export const PRODUCTS: Product[] = [
     price: 820,
     category: Category.FIGURINES,
     image: "https://i.ibb.co/ZRb6X5y7/f6.png"
-  },
-  {
-    id: "f7",
-    name: { en: "The Flying Spirit", ro: "Spiritul Zburător" },
-    description: { 
-        en: "A dynamic wire figure with a flowing mesh cape captured in a leap of faith, mounted on an industrial sprocket base.", 
-        ro: "O figurină din sârmă cu o pelerină din plasă fluidă, capturată într-un salt, montată pe un soclu din pinion industrial." 
-    },
-    price: 800,
-    category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1554188248-986adbb73be4?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: "f8",
-    name: { en: "Tree of Iron Thought", ro: "Arborele Gândului de Fier" },
-    description: { 
-        en: "A surreal head silhouette with complex, neural-like branches made of hand-twisted wire, symbolizing the growth of ideas.", 
-        ro: "O sculptură suprarealistă de cap cu ramificații complexe asemănătoare căilor neurale, realizate din sârmă răsucită manual." 
-    },
-    price: 850,
-    category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "f9",
