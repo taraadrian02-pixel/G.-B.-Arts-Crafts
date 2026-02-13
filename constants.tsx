@@ -11,185 +11,193 @@ export const BUSINESS_INFO = {
   facebook: "https://facebook.com/gbartscrafts",
 };
 
+/**
+ * IMAGE FOLDER INSTRUCTIONS:
+ * Create a folder named 'images' in your root directory.
+ * Rename your files as follows:
+ * - george.jpg (Artist photo)
+ * - p1.jpg through p5.jpg (Paintings)
+ * - f1.jpg through f11.jpg (Figurines)
+ */
 export const PRODUCTS: Product[] = [
-  // PAINTINGS (€200)
+  // --- 5 PAINTINGS (€200) ---
   {
     id: "p1",
     name: { en: "Honda Type R - Midnight Ridge", ro: "Honda Type R - Creasta de Miezul Nopții" },
     description: { 
-        en: "3D mixed media painting featuring a blue Honda Type R model navigating a textured, relief-carved mountain pass under a textured moon.", 
-        ro: "Pictură mixed media 3D cu un model Honda Type R albastru parcurgând o trecătoare montană sculptată în relief sub o lună texturată." 
+        en: "3D mixed media painting featuring a blue Honda Type R navigating a textured relief mountain pass under a golden moon.", 
+        ro: "Pictură mixed media 3D cu un model Honda Type R albastru parcurgând o trecătoare montană în relief sub o lună aurie." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://pixabay.com/photos/art-car-honda-typer-car-model-10121101"
+    image: "./images/p1.jpg"
   },
   {
     id: "p2",
     name: { en: "BMW X6 Silver Splatter", ro: "BMW X6 Silver Splatter" },
     description: { 
-        en: "Expressive automotive art with a silver BMW X6 model as the centerpiece on a dark, dynamic canvas with vibrant gold and red splatters.", 
-        ro: "Artă auto expresivă cu un model BMW X6 argintiu ca punct central pe o pânză întunecată și dinamică, cu stropi vibranți de aur și roșu." 
+        en: "Dynamic silver BMW X6 model centered on a dark canvas with energetic paint splatters in gold, red, and emerald.", 
+        ro: "Model BMW X6 argintiu centrat pe o pânză închisă cu stropi energetici de vopsea aurie, roșie și verde smarald." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800"
+    image: "./images/p2.jpg"
   },
   {
     id: "p3",
     name: { en: "The Yellow Bicycle Study", ro: "Studiu Bicicletă Galbenă" },
     description: { 
-        en: "A striking yellow bicycle set against a deep textured background of dark grit and atmospheric metallic light.", 
-        ro: "O bicicletă galbenă vibrantă situată pe un fundal cu textură profundă, cu granulație închisă și lumină metalică atmosferică." 
+        en: "Vibrant yellow bicycle miniature set against a deep textured background with metallic gold leaf and dark grit accents.", 
+        ro: "Miniatură de bicicletă galbenă vibrantă pe un fundal texturat profund cu foiță de aur metalică și accente de granulație închisă." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&q=80&w=800"
+    image: "./images/p3.jpg"
   },
   {
     id: "p4",
-    name: { en: "G-Wagon Abstract Horizon", ro: "G-Wagon Orizont Abstract" },
+    name: { en: "G-Class Abstract 'Banier'", ro: "G-Class Abstract 'Banier'" },
     description: { 
-        en: "Black Mercedes G-Class surrounded by chaotic, expressive brushstrokes of crimson and emerald on a dark field with gold accents.", 
-        ro: "Mercedes G-Class negru înconjurat de pensulații haotice și expresive de roșu și smarald pe un fundal întunecat cu accente aurii." 
+        en: "Black Mercedes G-Class surrounded by expressive, chaotic brushstrokes and textured 'Banier' lettering at the base.", 
+        ro: "Mercedes G-Class negru înconjurat de pensulații haotice expresive și inscripția texturată 'Banier' la bază." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://pixabay.com/photos/art-canvas-painting-mercedes-10121102"
+    image: "./images/p4.jpg"
   },
   {
     id: "p5",
-    name: { en: "Mercedes G-Class Drift", ro: "Mercedes G-Class Drift" },
+    name: { en: "Mercedes G - White Arc Drift", ro: "Mercedes G - Drift Arc Alb" },
     description: { 
-        en: "Dynamic composition featuring a black G-Wagon making a sharp turn, simulated by a dramatic thick white arc of textured paint.", 
-        ro: "Compoziție dinamică prezentând un G-Wagon negru într-un viraj strâns, simulat printr-un arc alb gros și dramatic de vopsea texturată." 
+        en: "Dramatic white paint arc simulating a high-speed drift from a black G-Wagon on an industrial dark background.", 
+        ro: "Arc dramatic de vopsea albă simulând un drift de mare viteză al unui G-Wagon negru pe un fundal industrial." 
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800"
+    image: "./images/p5.jpg"
   },
 
-  // FIGURINES (€700 - €1000)
+  // --- 11 FIGURINES (€700 - €1000) ---
   {
     id: "f1",
-    name: { en: "The Guardian Angel (Textured)", ro: "Îngerul Păzitor (Texturat)" },
+    name: { en: "The Mesh Angel", ro: "Îngerul din Plasă" },
     description: { 
-        en: "Industrial metal angel with heavily welded, porous wings and a flowing gown made from delicate wire mesh.", 
-        ro: "Înger din metal industrial cu aripi masive sudate și poroase și o robă fluidă realizată din plasă metalică delicată." 
+        en: "Industrial metal angel with a black sphere head, heavily welded textured wings, and a flowing mesh gown.", 
+        ro: "Înger din metal industrial cu cap sferic negru, aripi texturate sudate masiv și o robă fluidă din plasă." 
     },
     price: 850,
     category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1554188248-986adbb73be4?auto=format&fit=crop&q=80&w=800"
+    image: "./images/f1.jpg"
   },
   {
     id: "f2",
-    name: { en: "Grand Central Guitar Clock", ro: "Ceas Chitară Grand Central" },
-    description: { 
-        en: "Functional guitar sculpture built from transmission chains, sprockets, and bolts, featuring a vintage Grand Central Terminal clock.", 
-        ro: "Sculptură funcțională de chitară construită din lanțuri de transmisie, pinioane și șuruburi, cu un ceas vintage Grand Central Terminal." 
-    },
-    price: 980,
-    category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: "f3",
     name: { en: "Minimalist Metal Angel", ro: "Înger Metalic Minimalist" },
     description: { 
-        en: "A sleek, contemporary angel figurine with flat plate-metal wings and a polished silhouette.", 
-        ro: "O figurină de înger contemporană, cu aripi din foi plate de metal și o siluetă polișată." 
+        en: "Contemporary angel figurine with flat metal-plate wings and a slender industrial silhouette.", 
+        ro: "Figurină de înger contemporană cu aripi din foi de metal plate și o siluetă industrială subțire." 
     },
     price: 700,
     category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800"
+    image: "./images/f2.jpg"
+  },
+  {
+    id: "f3",
+    name: { en: "Grand Central Guitar Clock", ro: "Ceas Chitară Grand Central" },
+    description: { 
+        en: "Intricate guitar sculpture crafted from bicycle chains and gears, featuring a functional 'Grand Central' clock face.", 
+        ro: "Sculptură de chitară complexă realizată din lanțuri de bicicletă și pinioane, cu un ceas 'Grand Central' funcțional." 
+    },
+    price: 980,
+    category: Category.FIGURINES,
+    image: "./images/f3.jpg"
   },
   {
     id: "f4",
-    name: { en: "The Burden of Sisyphus", ro: "Povara lui Sisif" },
+    name: { en: "The Chain of Sisyphus", ro: "Lanțul lui Sisif" },
     description: { 
-        en: "A metal figure straining to pull a natural stone with a thick industrial chain, symbolizing human perseverance.", 
-        ro: "O figurină metalică ce depune efort pentru a trage o piatră naturală cu un lanț industrial gros, simbolizând perseverența umană." 
+        en: "Metal figure made of welded rods and chains, captured in the act of pulling a natural stone burden.", 
+        ro: "Figurină metalică realizată din tije sudate și lanțuri, capturată în timp ce trage o piatră naturală." 
     },
     price: 750,
     category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800"
+    image: "./images/f4.jpg"
   },
   {
     id: "f5",
-    name: { en: "Lunar Ritual Gathering", ro: "Adunarea Ritualului Lunar" },
+    name: { en: "Triple Figure Lunar Ritual", ro: "Ritual Lunar - Trei Figuri" },
     description: { 
-        en: "An intricate multi-figure installation with wire-mesh beings connected by chains standing before a large illuminated moon.", 
-        ro: "O instalație complexă cu mai multe figurine din plasă metalică conectate prin lanțuri în fața unei luni iluminate mari." 
+        en: "Three wire-mesh figures connected by chains standing before a large, illuminated lunar backdrop.", 
+        ro: "Trei figurine din plasă de sârmă conectate prin lanțuri în fața unui fundal lunar mare, iluminat." 
     },
     price: 1000,
     category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=800"
+    image: "./images/f5.jpg"
   },
   {
     id: "f6",
-    name: { en: "The Scholar on Gear", ro: "Cărturarul pe Roată Dințată" },
+    name: { en: "The Wire Scholar", ro: "Cărturarul din Sârmă" },
     description: { 
-        en: "A serene figure reading an industrial steel book, seated atop a large weathered metal gear base.", 
-        ro: "O figurină senină citind o carte din oțel industrial, așezată pe o bază mare din roată dințată metalică." 
+        en: "Delicate figure hand-woven from wire, reading a small metal book while seated on a gear foundation.", 
+        ro: "Figurină delicată țesută manual din sârmă, citind o mică carte metalică, așezată pe o bază din roată dințată." 
     },
     price: 820,
     category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800"
+    image: "./images/f6.jpg"
   },
   {
     id: "f7",
-    name: { en: "Spirit of Dynamic Energy", ro: "Spiritul Energiei Dinamice" },
+    name: { en: "Flying Spirit on Gear", ro: "Spirit Zburător pe Roată Dințată" },
     description: { 
-        en: "Abstract seated wire figure with a flowing mesh cape, capturing a moment of intense forward momentum.", 
-        ro: "Figurină abstractă din sârmă așezată, cu o pelerină fluidă din plasă, capturând un moment de impuls intens." 
+        en: "Wire-mesh figure with a cape in motion, mounted atop a weathered industrial gear base.", 
+        ro: "Figurină din plasă de sârmă cu pelerină în mișcare, montată pe o bază din roată dințată industrială." 
     },
     price: 800,
     category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=800"
+    image: "./images/f7.jpg"
   },
   {
     id: "f8",
-    name: { en: "The Tree of Thought", ro: "Arborele Gândului" },
+    name: { en: "Tree of Thought", ro: "Copacul Gândului" },
     description: { 
-        en: "Surreal sculpture with branch-like neural root extensions emerging from a central figure, merging nature with machine.", 
-        ro: "Sculptură suprarealistă cu extensii ramificate asemănătoare rădăcinilor neurale care ies dintr-o figură centrală." 
+        en: "Surreal wire sculpture featuring a figure with branching neural-like extensions from the head.", 
+        ro: "Sculptură suprarealistă din sârmă cu o figurină ale cărei extensii ramificate pornesc din cap." 
     },
-    price: 880,
+    price: 850,
     category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1444491741275-3747c53c99b4?auto=format&fit=crop&q=80&w=800"
+    image: "./images/f8.jpg"
   },
   {
     id: "f9",
-    name: { en: "Kneeling Paladin", ro: "Paladin Îngenuncheat" },
+    name: { en: "Kneeling Paladin with Sword", ro: "Paladin Îngenuncheat cu Sabie" },
     description: { 
-        en: "Wire warrior sculpture kneeling before a steel sword embedded in a raw stone base.", 
-        ro: "Sculptură de războinic din sârmă îngenuncheat în fața unei săbii din oțel înfipte într-o bază de piatră brută." 
+        en: "Wire warrior kneeling before a steel sword embedded in a raw stone, symbolizing honor.", 
+        ro: "Războinic din sârmă îngenuncheat în fața unei săbii de oțel înfipte într-o piatră brută, simbolizând onoarea." 
     },
     price: 900,
     category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?auto=format&fit=crop&q=80&w=800"
+    image: "./images/f9.jpg"
   },
   {
     id: "f10",
     name: { en: "The Iron Bull", ro: "Taurul de Fier" },
     description: { 
-        en: "Massive bull sculpture built entirely from heavy-duty chains, sprockets, and industrial scrap metal.", 
-        ro: "Sculptură masivă de taur realizată integral din lanțuri grele, pinioane și deșeuri metalice industriale." 
+        en: "Powerful bull sculpture constructed from heavy transmission chains, sprockets, and industrial scrap.", 
+        ro: "Sculptură puternică de taur construită din lanțuri de transmisie grele, pinioane și resturi industriale." 
     },
     price: 950,
     category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=800"
+    image: "./images/f10.jpg"
   },
   {
     id: "f11",
-    name: { en: "Mesh Contemplation", ro: "Contemplare în Plasă" },
+    name: { en: "Wire-Mesh Contemplation", ro: "Contemplare din Plasă" },
     description: { 
-        en: "Seated figurine showcasing the delicate transparency of hand-woven wire mesh over a solid mechanical base.", 
-        ro: "Figurină așezată care prezintă transparența delicată a plasei metalice țesute manual peste o bază mecanică solidă." 
+        en: "Abstract seated figure showcasing the delicate texture of hand-woven wire mesh over mechanical parts.", 
+        ro: "Figurină abstractă așezată ce prezintă textura delicată a plasei de sârmă țesute manual peste piese mecanice." 
     },
-    price: 800,
+    price: 780,
     category: Category.FIGURINES,
-    image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&q=80&w=800"
+    image: "./images/f11.jpg"
   }
 ];
 

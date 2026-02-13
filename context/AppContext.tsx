@@ -21,7 +21,7 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Default language is now Romanian
+  // Application now defaults to Romanian
   const [language, setLanguage] = useState<Language>('ro');
   const [cart, setCart] = useState<CartItem[]>([]);
   const [activeCategory, setActiveCategory] = useState<Category | 'All'>('All');

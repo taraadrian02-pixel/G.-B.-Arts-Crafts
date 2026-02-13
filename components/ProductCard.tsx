@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Product } from '../types';
 import { useApp } from '../context/AppContext';
 import { TRANSLATIONS } from '../constants';
@@ -10,20 +10,37 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { language, addToCart } = useApp();
+  const [imageError, setImageError] = useState(false);
   const t = (key: string) => TRANSLATIONS[key][language];
 
   return (
     <div className="group relative bg-white border border-slate-100 overflow-hidden transition-all hover:shadow-2xl">
-      <div className="aspect-[3/4] overflow-hidden bg-slate-100">
-        <img 
-          src={product.image} 
-          alt={product.name[language]} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-        />
+      <div className="aspect-[3/4] overflow-hidden bg-slate-100 relative">
+        {!imageError ? (
+          <img 
+            src={product.image} 
+            alt={product.name[language]} 
+            onError={() => setImageError(true)}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+        ) : (
+          <div className="w-full h-full flex flex-col items-center justify-center bg-slate-200 p-6 text-center">
+            <svg className="w-12 h-12 text-slate-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+              {language === 'ro' ? 'Imagine Indisponibilă' : 'Image Unavailable'}
+            </span>
+            <span className="text-[8px] text-slate-400 mt-1 break-all px-2">
+              {product.image}
+            </span>
+          </div>
+        )}
+        
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
           <button 
             onClick={() => addToCart(product)}
-            className="px-6 py-3 bg-white text-slate-900 text-xs font-bold uppercase tracking-widest hover:bg-slate-100 transition-colors"
+            className="px-6 py-3 bg-white text-slate-900 text-xs font-bold uppercase tracking-widest hover:bg-slate-100 transition-colors shadow-xl"
           >
             {t('add_to_cart')}
           </button>
