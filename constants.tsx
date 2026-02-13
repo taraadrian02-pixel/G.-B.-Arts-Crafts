@@ -22,7 +22,7 @@ export const PRODUCTS: Product[] = [
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1617469767053-d3b523a0b982?auto=format&fit=crop&q=80&w=800"
+    image: "https://pixabay.com/photos/art-car-honda-typer-car-model-10121101"
   },
   {
     id: "p2",
@@ -55,7 +55,7 @@ export const PRODUCTS: Product[] = [
     },
     price: 200,
     category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1520050206274-a1af446338cb?auto=format&fit=crop&q=80&w=800"
+    image: "https://pixabay.com/photos/art-canvas-painting-mercedes-10121102"
   },
   {
     id: "p5",
