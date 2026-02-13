@@ -15,14 +15,14 @@ const ArtistBio: React.FC = () => {
             <div className="aspect-square bg-slate-200 overflow-hidden relative z-10">
               <img 
                 src="https://picsum.photos/seed/artist/800/800" 
-                alt="The Artist George Barbu" 
+                alt="The Artist George Băbău" 
                 className="w-full h-full object-cover grayscale"
               />
             </div>
             <div className="absolute -top-6 -left-6 w-full h-full border-2 border-slate-900 z-0" />
             <div className="absolute -bottom-6 -right-6 px-8 py-6 bg-slate-900 text-white z-20">
               <span className="text-xs font-bold tracking-[0.3em] uppercase block mb-1">Founder</span>
-              <span className="text-2xl font-serif">George Barbu</span>
+              <span className="text-2xl font-serif">George Băbău</span>
             </div>
           </div>
           
