@@ -17,10 +17,12 @@ const GeminiAdvisor: React.FC = () => {
     setResponse('');
     
     try {
+      // Initialize the GoogleGenAI client with the mandatory apiKey named parameter.
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       const model = 'gemini-3-flash-preview';
       
-      const productSummary = PRODUCTS.map(p => `- ${p.name.en} (€${p.price}): ${p.description.en}`).join('\n');
+      // Fix: Removed 'p.price' which was causing a TypeScript error as it doesn't exist on the Product type.
+      const productSummary = PRODUCTS.map(p => `- ${p.name.en}: ${p.description.en}`).join('\n');
       
       const systemInstruction = `You are an art advisor for G. B. Arts&Crafts, an elite metal sculpture and automotive art gallery. 
       Help the customer decide what to buy based on their interests. 
@@ -34,6 +36,7 @@ const GeminiAdvisor: React.FC = () => {
         config: { systemInstruction }
       });
       
+      // Access the .text property directly from the result object as per Google GenAI guidelines.
       setResponse(result.text || "I'm sorry, I couldn't process that. Please try again.");
     } catch (err) {
       console.error(err);

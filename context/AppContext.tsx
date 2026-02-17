@@ -10,7 +10,6 @@ interface AppContextType {
   removeFromCart: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
   clearCart: () => void;
-  cartTotal: number;
   cartCount: number;
   activeCategory: Category | 'All';
   setActiveCategory: (cat: Category | 'All') => void;
@@ -21,7 +20,6 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Application now defaults to Romanian
   const [language, setLanguage] = useState<Language>('ro');
   const [cart, setCart] = useState<CartItem[]>([]);
   const [activeCategory, setActiveCategory] = useState<Category | 'All'>('All');
@@ -45,11 +43,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const addToCart = (product: Product) => {
     setCart(prev => {
       const existing = prev.find(item => item.id === product.id);
-      if (existing) {
-        // Since pieces are unique, we don't increment quantity. 
-        // We just return the current state or could show a notification.
-        return prev;
-      }
+      if (existing) return prev;
       return [...prev, { ...product, quantity: 1 }];
     });
   };
@@ -59,22 +53,19 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const updateQuantity = (productId: string, quantity: number) => {
-    // For unique pieces, quantity is always 1 unless removed.
     if (quantity <= 0) {
       removeFromCart(productId);
       return;
     }
-    // We don't allow quantity > 1.
   };
 
   const clearCart = () => setCart([]);
 
-  const cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
   const cartCount = cart.reduce((count, item) => count + item.quantity, 0);
 
   return (
     <AppContext.Provider value={{
-      language, setLanguage, cart, addToCart, removeFromCart, updateQuantity, clearCart, cartTotal, cartCount,
+      language, setLanguage, cart, addToCart, removeFromCart, updateQuantity, clearCart, cartCount,
       activeCategory, setActiveCategory, infoModal, setInfoModal
     }}>
       {children}

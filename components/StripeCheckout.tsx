@@ -1,24 +1,33 @@
 
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
+import { BUSINESS_INFO } from '../constants';
 
-interface StripeCheckoutProps {
+interface RequestFormProps {
   onClose: () => void;
   onSuccess: () => void;
 }
 
-const StripeCheckout: React.FC<StripeCheckoutProps> = ({ onClose, onSuccess }) => {
-  const { cartTotal } = useApp();
+const RequestForm: React.FC<RequestFormProps> = ({ onClose, onSuccess }) => {
+  const { cart, language } = useApp();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const handlePayment = (e: React.FormEvent) => {
+  const handleRequest = (e: React.FormEvent) => {
     e.preventDefault();
     setIsProcessing(true);
-    // Simulate API call to Stripe
+
+    const itemList = cart.map(item => `- ${item.name[language]}`).join('%0D%0A');
+    const subject = `Inquiry: Art Pieces Request - ${name}`;
+    const body = `Hello George,%0D%0A%0D%0AI am interested in the following pieces from your collection:%0D%0A%0D%0A${itemList}%0D%0A%0D%0AMy contact details:%0D%0AName: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0APlease let me know the details and availability.%0D%0A%0D%0ABest regards,%0D%0A${name}`;
+    
+    // Simulate processing
     setTimeout(() => {
+      window.location.href = `mailto:${BUSINESS_INFO.email}?subject=${subject}&body=${body}`;
       setIsProcessing(false);
       onSuccess();
-    }, 2000);
+    }, 1500);
   };
 
   return (
@@ -26,45 +35,52 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ onClose, onSuccess }) =
       <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-md" onClick={onClose} />
       
       <div className="relative w-full max-w-lg bg-white p-8 shadow-2xl rounded-sm">
-        <h2 className="text-2xl font-bold font-serif mb-6">Secure Checkout</h2>
+        <h2 className="text-2xl font-bold font-serif mb-6">
+          {language === 'ro' ? 'Confirmă Cererea' : 'Confirm Request'}
+        </h2>
         
-        <form onSubmit={handlePayment} className="space-y-6">
+        <form onSubmit={handleRequest} className="space-y-6">
           <div className="space-y-4">
             <div>
-              <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">Card Information</label>
-              <div className="px-4 py-4 bg-slate-50 border border-slate-200 flex items-center justify-between">
-                <input 
-                  required
-                  type="text" 
-                  placeholder="4242 4242 4242 4242" 
-                  className="bg-transparent outline-none w-full"
-                />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Visa_2021.svg" className="h-4" alt="Visa" />
-              </div>
+              <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">
+                {language === 'ro' ? 'Nume Complet' : 'Full Name'}
+              </label>
+              <input 
+                required
+                type="text" 
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full px-4 py-4 bg-slate-50 border border-slate-200 outline-none focus:border-slate-900 transition-colors"
+                placeholder="Ex. George Popescu"
+              />
             </div>
             
-            <div className="grid grid-cols-2 gap-4">
-               <div>
-                <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">Expiry Date</label>
-                <input required type="text" placeholder="MM / YY" className="w-full px-4 py-4 bg-slate-50 border border-slate-200 outline-none" />
-               </div>
-               <div>
-                <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">CVC</label>
-                <input required type="text" placeholder="123" className="w-full px-4 py-4 bg-slate-50 border border-slate-200 outline-none" />
-               </div>
+            <div>
+              <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">
+                {language === 'ro' ? 'Adresa de Email' : 'Email Address'}
+              </label>
+              <input 
+                required
+                type="email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-4 bg-slate-50 border border-slate-200 outline-none focus:border-slate-900 transition-colors"
+                placeholder="nume@exemplu.com"
+              />
             </div>
           </div>
 
           <div className="border-t border-slate-100 pt-6">
-            <div className="flex justify-between items-center mb-6">
-                <span className="text-sm text-slate-500 uppercase tracking-widest">Amount to Pay</span>
-                <span className="text-2xl font-bold">€{cartTotal}</span>
-            </div>
+            <p className="text-xs text-slate-500 mb-6 italic leading-relaxed">
+              {language === 'ro' 
+                ? 'Cererea va fi trimisă direct către George Băbău. Aceasta va deschide aplicația dumneavoastră de email.' 
+                : 'Your request will be sent directly to George Băbău. This will open your default email client.'}
+            </p>
             
             <button 
               disabled={isProcessing}
               type="submit"
-              className={`w-full py-4 bg-blue-600 text-white text-xs font-bold uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-3 ${isProcessing ? 'opacity-70 cursor-not-allowed' : 'hover:bg-blue-700'}`}
+              className={`w-full py-4 bg-slate-900 text-white text-xs font-bold uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-3 ${isProcessing ? 'opacity-70 cursor-not-allowed' : 'hover:bg-slate-800'}`}
             >
               {isProcessing ? (
                 <>
@@ -72,7 +88,7 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ onClose, onSuccess }) =
                   Processing...
                 </>
               ) : (
-                <>Pay with Stripe</>
+                <>{language === 'ro' ? 'Trimite prin Email' : 'Send via Email'}</>
               )}
             </button>
             <button 
@@ -89,4 +105,4 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ onClose, onSuccess }) =
   );
 };
 
-export default StripeCheckout;
+export default RequestForm;

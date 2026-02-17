@@ -18,7 +18,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     setImageError(false);
   }, [product.image]);
 
-  // Handle ESC key to close modal
   useEffect(() => {
     if (isZoomed) {
       const handleEsc = (e: KeyboardEvent) => {
@@ -58,7 +57,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <>
-      {/* Gallery Card */}
       <div 
         onClick={() => setIsZoomed(true)}
         className="group relative bg-white border border-slate-100 overflow-hidden transition-all hover:shadow-xl cursor-zoom-in"
@@ -80,9 +78,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <h3 className="text-sm font-semibold text-slate-900">
               {product.name[language]}
             </h3>
-            <p className="text-sm font-bold text-slate-900">
-              €{product.price}
-            </p>
           </div>
           <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">
             {product.category}
@@ -90,7 +85,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
       </div>
 
-      {/* Detail Zoom Modal */}
       {isZoomed && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
           <div 
@@ -99,7 +93,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           />
           
           <div className="relative w-full max-w-6xl bg-white shadow-2xl flex flex-col md:flex-row animate-in zoom-in-95 duration-300 max-h-[90vh] overflow-hidden">
-            {/* Close button */}
             <button 
               onClick={() => setIsZoomed(false)}
               className="absolute top-4 right-4 z-10 p-2 bg-white/80 hover:bg-white rounded-full transition-colors text-slate-900 shadow-md"
@@ -107,23 +100,18 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               <Icons.Close />
             </button>
 
-            {/* Image Section */}
             <div className="flex-1 bg-slate-100 flex items-center justify-center overflow-hidden">
               {renderImage("w-full h-full object-contain max-h-[40vh] md:max-h-full")}
             </div>
 
-            {/* Content Section */}
             <div className="w-full md:w-[400px] p-8 md:p-12 flex flex-col justify-between bg-white overflow-y-auto">
               <div>
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-4 block">
                   {product.category}
                 </span>
-                <h2 className="text-3xl font-bold text-slate-900 mb-2 font-serif">
+                <h2 className="text-3xl font-bold text-slate-900 mb-8 font-serif">
                   {product.name[language]}
                 </h2>
-                <p className="text-2xl font-bold text-slate-900 mb-8">
-                  €{product.price}
-                </p>
                 <div className="w-12 h-[2px] bg-slate-900 mb-8" />
                 <p className="text-sm text-slate-600 leading-relaxed mb-12">
                   {product.description[language]}

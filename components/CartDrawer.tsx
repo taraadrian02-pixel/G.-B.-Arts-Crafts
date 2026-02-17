@@ -10,7 +10,7 @@ interface CartDrawerProps {
 }
 
 const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, onCheckout }) => {
-  const { language, cart, removeFromCart, cartTotal, cartCount } = useApp();
+  const { language, cart, removeFromCart, cartCount } = useApp();
   const t = (key: string) => TRANSLATIONS[key][language];
 
   if (!isOpen) return null;
@@ -43,7 +43,6 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, onCheckout }) 
                   <div className="flex-1">
                     <div className="flex justify-between font-medium">
                       <h3 className="text-sm text-slate-900">{item.name[language]}</h3>
-                      <p className="text-sm text-slate-900">€{item.price}</p>
                     </div>
                     <div className="mt-4 flex items-center justify-between">
                       <div className="flex items-center">
@@ -68,7 +67,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, onCheckout }) 
             <div className="p-6 bg-slate-50 border-t border-slate-100">
               <div className="flex justify-between items-center mb-6">
                 <span className="text-sm font-medium text-slate-600 uppercase tracking-widest">{t('total')}</span>
-                <span className="text-2xl font-bold text-slate-900">€{cartTotal}</span>
+                <span className="text-2xl font-bold text-slate-900">{cartCount}</span>
               </div>
               <button 
                 onClick={onCheckout}

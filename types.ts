@@ -16,7 +16,6 @@ export interface Product {
     en: string;
     ro: string;
   };
-  price: number;
   category: Category;
   image: string;
 }

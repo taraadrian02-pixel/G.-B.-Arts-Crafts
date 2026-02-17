@@ -10,7 +10,7 @@ import CartDrawer from './components/CartDrawer';
 import ArtistBio from './components/ArtistBio';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import StripeCheckout from './components/StripeCheckout';
+import RequestForm from './components/StripeCheckout'; // Renamed import but file path remains for minimal diff, we updated the file content.
 import GeminiAdvisor from './components/GeminiAdvisor';
 import InfoModal from './components/InfoModal';
 
@@ -24,7 +24,7 @@ const GalleryContent: React.FC = () => {
     ? PRODUCTS 
     : PRODUCTS.filter(p => p.category === activeCategory);
 
-  const handleCheckoutSuccess = () => {
+  const handleRequestSuccess = () => {
     setIsCheckoutOpen(false);
     clearCart();
     setShowOrderSuccess(true);
@@ -44,7 +44,6 @@ const GalleryContent: React.FC = () => {
 
         <Hero />
 
-        {/* Gallery Section */}
         <section id="gallery" className="py-24 bg-white scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
@@ -94,9 +93,9 @@ const GalleryContent: React.FC = () => {
       />
 
       {isCheckoutOpen && (
-        <StripeCheckout 
+        <RequestForm 
           onClose={() => setIsCheckoutOpen(false)}
-          onSuccess={handleCheckoutSuccess}
+          onSuccess={handleRequestSuccess}
         />
       )}
 
