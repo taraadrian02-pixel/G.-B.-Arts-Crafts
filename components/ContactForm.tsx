@@ -16,8 +16,9 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate sending email
-    console.log(`Sending email to ${BUSINESS_INFO.email}`, formState);
+    const subject = `Message from ${formState.name}`;
+    const body = `Name: ${formState.name}%0D%0AEmail: ${formState.email}%0D%0A%0D%0AMessage:%0D%0A${formState.message}`;
+    window.location.href = `mailto:${BUSINESS_INFO.email}?subject=${subject}&body=${body}`;
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
     setFormState({ name: '', email: '', message: '' });
@@ -76,6 +77,9 @@ const ContactForm: React.FC = () => {
                 </a>
                 <a href={BUSINESS_INFO.facebook} target="_blank" rel="noopener noreferrer" className="p-3 bg-white text-slate-600 hover:text-slate-900 shadow-sm transition-all hover:-translate-y-1">
                     <Icons.Facebook />
+                </a>
+                <a href={BUSINESS_INFO.tiktok} target="_blank" rel="noopener noreferrer" className="p-3 bg-white text-slate-600 hover:text-slate-900 shadow-sm transition-all hover:-translate-y-1">
+                    <Icons.TikTok />
                 </a>
             </div>
           </div>

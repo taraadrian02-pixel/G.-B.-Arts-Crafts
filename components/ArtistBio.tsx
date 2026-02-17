@@ -15,7 +15,7 @@ const ArtistBio: React.FC = () => {
             <div className="aspect-[3/4] md:aspect-square bg-slate-200 overflow-hidden relative z-10 shadow-2xl">
               <img 
                 src="https://i.ibb.co/ZRkjPvXC/george.png" 
-                alt="Artist Babaú George Cosmin" 
+                alt="Artist Băbău George Cosmin" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1554188248-986adbb73be4?auto=format&fit=crop&q=80&w=800";
@@ -25,7 +25,7 @@ const ArtistBio: React.FC = () => {
             <div className="absolute -top-6 -left-6 w-full h-full border-2 border-slate-900 z-0" />
             <div className="absolute -bottom-6 -right-6 px-8 py-6 bg-slate-900 text-white z-20 shadow-xl">
               <span className="text-xs font-bold tracking-[0.3em] uppercase block mb-1 text-slate-400">Fondator</span>
-              <span className="text-2xl font-serif">Babaú George Cosmin</span>
+              <span className="text-2xl font-serif">Băbău George Cosmin</span>
             </div>
           </div>
           

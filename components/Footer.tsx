@@ -53,6 +53,7 @@ const Footer: React.FC = () => {
             <div className="flex gap-4">
               <a href={BUSINESS_INFO.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Icons.Instagram /></a>
               <a href={BUSINESS_INFO.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Icons.Facebook /></a>
+              <a href={BUSINESS_INFO.tiktok} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Icons.TikTok /></a>
             </div>
             <p className="mt-8 text-[10px] text-slate-600 font-bold uppercase tracking-[0.2em]">
                 Made in Zărnești, Romania
@@ -64,7 +65,7 @@ const Footer: React.FC = () => {
           <p>© {new Date().getFullYear()} G. B. Arts&Crafts. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-6">
             <span className="flex items-center gap-2">
-              <div className="w-1 h-1 bg-blue-500 rounded-full" /> Stripe Secured
+              <div className="w-1 h-1 bg-blue-500 rounded-full" /> Direct Artist Contact
             </span>
             <span className="flex items-center gap-2">
               <div className="w-1 h-1 bg-green-500 rounded-full" /> Worldwide Shipping
