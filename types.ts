@@ -18,6 +18,7 @@ export interface Product {
   };
   category: Category;
   image: string;
+  isSold?: boolean;
 }
 
 export interface CartItem extends Product {

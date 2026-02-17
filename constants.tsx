@@ -32,7 +32,7 @@ export const PRODUCTS: Product[] = [
         ro: "Model la scară BMW X6 argintiu dinamic centrat pe o pânză gri închis cu stropi energetici în roșu rubin, verde smarald și aur." 
     },
     category: Category.AUTOMOTIVE,
-    image: "https://i.ibb.co/XxcgnMjq/p2.png"
+    image: "https://images.unsplash.com/photo-1771320251705-9a73fb090b86?q=80&w=1677&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "p3",
@@ -52,7 +52,8 @@ export const PRODUCTS: Product[] = [
         ro: "Un model la scară Mercedes G-Class negru așezat pe un fundal abstract expresiv de pensulații roșii și verzi, cu inscripția industrială 'BANIER'." 
     },
     category: Category.AUTOMOTIVE,
-    image: "https://i.ibb.co/NnnTSQhq/p4.png"
+    image: "https://i.ibb.co/NnnTSQhq/p4.png",
+    isSold: true
   },
   {
     id: "p5",

@@ -46,12 +46,21 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       );
     }
     return (
-      <img 
-        src={product.image} 
-        alt={product.name[language]} 
-        onError={() => setImageError(true)}
-        className={`object-cover ${className}`}
-      />
+      <div className="relative w-full h-full">
+        <img 
+          src={product.image} 
+          alt={product.name[language]} 
+          onError={() => setImageError(true)}
+          className={`object-cover ${className}`}
+        />
+        {product.isSold && (
+          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+            <div className="bg-red-600 text-white px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] transform -rotate-12 shadow-xl border border-white/20">
+              {language === 'ro' ? 'VÂNDUT' : 'SOLD'}
+            </div>
+          </div>
+        )}
+      </div>
     );
   };
 
@@ -79,9 +88,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               {product.name[language]}
             </h3>
           </div>
-          <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">
-            {product.category}
-          </p>
+          <div className="flex justify-between items-center">
+            <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">
+              {product.category}
+            </p>
+            {product.isSold && (
+              <span className="text-[10px] text-red-600 font-bold uppercase tracking-widest">
+                SOLD / VÂNDUT
+              </span>
+            )}
+          </div>
         </div>
       </div>
 
@@ -109,9 +125,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-4 block">
                   {product.category}
                 </span>
-                <h2 className="text-3xl font-bold text-slate-900 mb-8 font-serif">
+                <h2 className="text-3xl font-bold text-slate-900 mb-2 font-serif">
                   {product.name[language]}
                 </h2>
+                {product.isSold && (
+                  <p className="text-red-600 font-bold text-xs uppercase tracking-widest mb-6">
+                    SOLD / VÂNDUT
+                  </p>
+                )}
                 <div className="w-12 h-[2px] bg-slate-900 mb-8" />
                 <p className="text-sm text-slate-600 leading-relaxed mb-12">
                   {product.description[language]}
@@ -119,16 +140,22 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               </div>
 
               <div>
-                <button 
-                  onClick={() => {
-                    addToCart(product);
-                    setIsZoomed(false);
-                  }}
-                  className="w-full py-4 bg-slate-900 text-white text-xs font-bold uppercase tracking-[0.2em] hover:bg-slate-800 transition-colors shadow-lg flex items-center justify-center gap-3"
-                >
-                  <Icons.Cart />
-                  {t('add_to_cart')}
-                </button>
+                {product.isSold ? (
+                  <div className="w-full py-4 border-2 border-slate-100 text-slate-400 text-xs font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-3 cursor-not-allowed">
+                    {language === 'ro' ? 'Piesă Vândută' : 'Item Sold'}
+                  </div>
+                ) : (
+                  <button 
+                    onClick={() => {
+                      addToCart(product);
+                      setIsZoomed(false);
+                    }}
+                    className="w-full py-4 bg-slate-900 text-white text-xs font-bold uppercase tracking-[0.2em] hover:bg-slate-800 transition-colors shadow-lg flex items-center justify-center gap-3"
+                  >
+                    <Icons.Cart />
+                    {t('add_to_cart')}
+                  </button>
+                )}
                 <p className="mt-4 text-[10px] text-center text-slate-400 uppercase tracking-widest font-bold">
                   Hand-welded & Unique Piece
                 </p>

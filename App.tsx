@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import RequestForm from './components/StripeCheckout'; // Renamed import but file path remains for minimal diff, we updated the file content.
 import GeminiAdvisor from './components/GeminiAdvisor';
 import InfoModal from './components/InfoModal';
+import Spotlight from './components/Spotlight';
 
 const GalleryContent: React.FC = () => {
   const { language, clearCart, activeCategory, setActiveCategory } = useApp();
@@ -76,6 +77,8 @@ const GalleryContent: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <Spotlight />
 
         <ArtistBio />
         <ContactForm />
