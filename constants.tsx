@@ -13,7 +13,17 @@ export const BUSINESS_INFO = {
 };
 
 export const PRODUCTS: Product[] = [
-  // --- 5 PAINTINGS ---
+  // --- 6 PAINTINGS ---
+  {
+    id: "p6",
+    name: { en: "Porsche 911 - Azure Velocity", ro: "Porsche 911 - Viteza Azurului" },
+    description: { 
+        en: "A striking cobalt blue Porsche 911 silhouette emerging from a sea of textured cerulean and titanium white paint, capturing the raw essence of aerodynamic form and speed.", 
+        ro: "O siluetă izbitoare de Porsche 911 albastru cobalt ce emerge dintr-o mare de vopsea texturată în nuanțe de cerulean și alb titan, capturând esența pură a formei aerodinamice și a vitezei." 
+    },
+    category: Category.AUTOMOTIVE,
+    image: "https://images.unsplash.com/photo-1771320251692-acfb68154ad6?q=80&w=1568&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
   {
     id: "p1",
     name: { en: "Honda Type R - Moonlight Relief", ro: "Honda Type R - Relief de Noapte" },
@@ -32,7 +42,9 @@ export const PRODUCTS: Product[] = [
         ro: "Model la scară BMW X6 argintiu dinamic centrat pe o pânză gri închis cu stropi energetici în roșu rubin, verde smarald și aur." 
     },
     category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1771320251705-9a73fb090b86?q=80&w=1677&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://images.unsplash.com/photo-1771320251705-9a73fb090b86?q=80&w=1677&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    rotate: true,
+    isSold: true
   },
   {
     id: "p3",

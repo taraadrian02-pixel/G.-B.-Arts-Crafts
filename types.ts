@@ -19,6 +19,7 @@ export interface Product {
   category: Category;
   image: string;
   isSold?: boolean;
+  rotate?: boolean;
 }
 
 export interface CartItem extends Product {

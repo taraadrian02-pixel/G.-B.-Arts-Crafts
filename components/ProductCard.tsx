@@ -32,7 +32,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     }
   }, [isZoomed]);
 
-  const renderImage = (className: string) => {
+  const renderImage = (className: string, isFullView: boolean = false) => {
     if (imageError) {
       return (
         <div className={`flex flex-col items-center justify-center bg-slate-200 p-6 text-center ${className}`}>
@@ -45,17 +45,20 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
       );
     }
+
+    const rotationClass = product.rotate ? 'rotate-90 scale-125' : '';
+
     return (
-      <div className="relative w-full h-full">
+      <div className={`relative w-full h-full flex items-center justify-center overflow-hidden bg-slate-100`}>
         <img 
           src={product.image} 
           alt={product.name[language]} 
           onError={() => setImageError(true)}
-          className={`object-cover ${className}`}
+          className={`object-cover transition-transform duration-700 ${className} ${rotationClass}`}
         />
         {product.isSold && (
-          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-            <div className="bg-red-600 text-white px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] transform -rotate-12 shadow-xl border border-white/20">
+          <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none overflow-hidden">
+            <div className="bg-red-600/90 text-white py-2 w-[180%] text-center font-black text-xs md:text-sm tracking-[0.4em] -rotate-45 shadow-2xl border-y-2 border-white/20 whitespace-nowrap">
               {language === 'ro' ? 'VÂNDUT' : 'SOLD'}
             </div>
           </div>
@@ -71,9 +74,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         className="group relative bg-white border border-slate-100 overflow-hidden transition-all hover:shadow-xl cursor-zoom-in"
       >
         <div className="aspect-[3/4] overflow-hidden bg-slate-100 relative">
-          {renderImage("w-full h-full transition-transform duration-700 group-hover:scale-105")}
+          {renderImage("w-full h-full group-hover:scale-105")}
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-          <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity z-20">
              <div className="p-2 bg-white/90 backdrop-blur rounded-full shadow-lg">
                 <svg className="w-4 h-4 text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
@@ -111,13 +114,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <div className="relative w-full max-w-6xl bg-white shadow-2xl flex flex-col md:flex-row animate-in zoom-in-95 duration-300 max-h-[90vh] overflow-hidden">
             <button 
               onClick={() => setIsZoomed(false)}
-              className="absolute top-4 right-4 z-10 p-2 bg-white/80 hover:bg-white rounded-full transition-colors text-slate-900 shadow-md"
+              className="absolute top-4 right-4 z-[110] p-2 bg-white/80 hover:bg-white rounded-full transition-colors text-slate-900 shadow-md"
             >
               <Icons.Close />
             </button>
 
             <div className="flex-1 bg-slate-100 flex items-center justify-center overflow-hidden">
-              {renderImage("w-full h-full object-contain max-h-[40vh] md:max-h-full")}
+              {renderImage("w-full h-full object-contain max-h-[40vh] md:max-h-full", true)}
             </div>
 
             <div className="w-full md:w-[400px] p-8 md:p-12 flex flex-col justify-between bg-white overflow-y-auto">
