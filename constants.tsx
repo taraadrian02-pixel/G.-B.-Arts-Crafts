@@ -22,7 +22,8 @@ export const PRODUCTS: Product[] = [
         ro: "O siluetă izbitoare de Porsche 911 albastru cobalt ce emerge dintr-o mare de vopsea texturată în nuanțe de cerulean și alb titan, capturând esența pură a formei aerodinamice și a vitezei." 
     },
     category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1771320251692-acfb68154ad6?q=80&w=1568&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://images.unsplash.com/photo-1771320251692-acfb68154ad6?q=80&w=1568&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    aspectRatio: 'landscape'
   },
   {
     id: "p1",
@@ -43,8 +44,8 @@ export const PRODUCTS: Product[] = [
     },
     category: Category.AUTOMOTIVE,
     image: "https://images.unsplash.com/photo-1771320251705-9a73fb090b86?q=80&w=1677&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    rotate: true,
-    isSold: true
+    aspectRatio: 'landscape',
+    isSold: false // User requested to remove SOLD from BMW
   },
   {
     id: "p3",
@@ -192,7 +193,15 @@ export const TRANSLATIONS: Translations = {
   send_message: { en: "Send Message", ro: "Trimite Mesaj" },
   success_order: { en: "Thank you for your request!", ro: "Vă mulțumim pentru cerere!" },
   total: { en: "Total Items", ro: "Total Produse" },
-  footer_text: { en: "Handcrafted in the heart of Transylvania.", ro: "Creat manual în inima Transilvaniei." }
+  footer_text: { en: "Handcrafted in the heart of Transylvania.", ro: "Creat manual în inima Transilvaniei." },
+  
+  // New Translations
+  collection_label: { en: "The Collection", ro: "Colecția" },
+  featured_works: { en: "Featured Works", ro: "Lucrări Reprezentative" },
+  cat_all: { en: "All", ro: "Toate" },
+  cat_automotive: { en: "Automotive Art", ro: "Artă Auto" },
+  cat_figurines: { en: "Metal Figurines", ro: "Figurine Metalice" },
+  sold: { en: "SOLD", ro: "VÂNDUT" }
 };
 
 export const Icons = {

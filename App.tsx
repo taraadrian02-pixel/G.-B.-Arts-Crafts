@@ -21,6 +21,8 @@ const GalleryContent: React.FC = () => {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [showOrderSuccess, setShowOrderSuccess] = useState(false);
 
+  const t = (key: string) => TRANSLATIONS[key][language];
+
   const filteredProducts = activeCategory === 'All' 
     ? PRODUCTS 
     : PRODUCTS.filter(p => p.category === activeCategory);
@@ -31,6 +33,12 @@ const GalleryContent: React.FC = () => {
     setShowOrderSuccess(true);
     setTimeout(() => setShowOrderSuccess(false), 5000);
   };
+
+  const categories = [
+    { id: 'All', label: t('cat_all') },
+    { id: Category.AUTOMOTIVE, label: t('cat_automotive') },
+    { id: Category.FIGURINES, label: t('cat_figurines') }
+  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -49,22 +57,22 @@ const GalleryContent: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div>
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-4 block">The Collection</span>
-                <h2 className="text-4xl font-bold text-slate-900 font-serif">Featured Works</h2>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-4 block">{t('collection_label')}</span>
+                <h2 className="text-4xl font-bold text-slate-900 font-serif">{t('featured_works')}</h2>
               </div>
               
-              <div className="flex gap-4">
-                {['All', Category.AUTOMOTIVE, Category.FIGURINES].map((cat) => (
+              <div className="flex flex-wrap gap-4">
+                {categories.map((cat) => (
                   <button
-                    key={cat}
-                    onClick={() => setActiveCategory(cat as any)}
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id as any)}
                     className={`px-6 py-2 text-[10px] font-bold uppercase tracking-widest border transition-all ${
-                      activeCategory === cat 
+                      activeCategory === cat.id 
                         ? 'bg-slate-900 border-slate-900 text-white shadow-lg' 
                         : 'border-slate-200 text-slate-500 hover:border-slate-900 hover:text-slate-900'
                     }`}
                   >
-                    {cat}
+                    {cat.label}
                   </button>
                 ))}
               </div>

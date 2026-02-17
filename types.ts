@@ -20,6 +20,7 @@ export interface Product {
   image: string;
   isSold?: boolean;
   rotate?: boolean;
+  aspectRatio?: 'portrait' | 'landscape';
 }
 
 export interface CartItem extends Product {

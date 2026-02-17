@@ -46,7 +46,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       );
     }
 
-    const rotationClass = product.rotate ? 'rotate-90 scale-125' : '';
+    // Use object-contain for landscape products in the portrait box to avoid cropping
+    const fitClass = product.aspectRatio === 'landscape' && !isFullView ? 'object-contain' : 'object-cover';
 
     return (
       <div className={`relative w-full h-full flex items-center justify-center overflow-hidden bg-slate-100`}>
@@ -54,12 +55,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           src={product.image} 
           alt={product.name[language]} 
           onError={() => setImageError(true)}
-          className={`object-cover transition-transform duration-700 ${className} ${rotationClass}`}
+          className={`transition-transform duration-700 ${className} ${fitClass}`}
         />
         {product.isSold && (
           <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none overflow-hidden">
             <div className="bg-red-600/90 text-white py-2 w-[180%] text-center font-black text-xs md:text-sm tracking-[0.4em] -rotate-45 shadow-2xl border-y-2 border-white/20 whitespace-nowrap">
-              {language === 'ro' ? 'VÂNDUT' : 'SOLD'}
+              {t('sold')}
             </div>
           </div>
         )}
@@ -97,7 +98,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </p>
             {product.isSold && (
               <span className="text-[10px] text-red-600 font-bold uppercase tracking-widest">
-                SOLD / VÂNDUT
+                {t('sold')}
               </span>
             )}
           </div>
@@ -133,7 +134,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 </h2>
                 {product.isSold && (
                   <p className="text-red-600 font-bold text-xs uppercase tracking-widest mb-6">
-                    SOLD / VÂNDUT
+                    {t('sold')}
                   </p>
                 )}
                 <div className="w-12 h-[2px] bg-slate-900 mb-8" />
