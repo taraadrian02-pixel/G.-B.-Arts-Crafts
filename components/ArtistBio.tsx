@@ -30,7 +30,7 @@ const ArtistBio: React.FC = () => {
           </div>
           
           <div className="flex flex-col justify-center">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">Behind the Iron</span>
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">{t('bio_label')}</span>
             <h2 className="text-4xl font-bold text-slate-900 mb-8 font-serif">{t('bio_title')}</h2>
             <div className="prose prose-slate max-w-none">
               <p className="text-lg text-slate-600 leading-relaxed mb-8 italic">

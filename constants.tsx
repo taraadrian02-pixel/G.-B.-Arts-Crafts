@@ -13,7 +13,7 @@ export const BUSINESS_INFO = {
 };
 
 export const PRODUCTS: Product[] = [
-  // --- 6 PAINTINGS ---
+  // --- PAINTINGS ---
   {
     id: "p6",
     name: { en: "Porsche 911 - Azure Velocity", ro: "Porsche 911 - Viteza Azurului" },
@@ -26,6 +26,18 @@ export const PRODUCTS: Product[] = [
     aspectRatio: 'landscape'
   },
   {
+    id: "p2",
+    name: { en: "BMW X6 Silver Splatter", ro: "BMW X6 Silver Splatter" },
+    description: { 
+        en: "Dynamic silver BMW X6 scale model centered on a dark grey canvas with energetic splatters in ruby red, emerald green, and gold.", 
+        ro: "Model la scară BMW X6 argintiu dinamic centrat pe o pânză gri închis cu stropi energetici în roșu rubin, verde smarald și aur." 
+    },
+    category: Category.AUTOMOTIVE,
+    image: "https://images.unsplash.com/photo-1771320251705-9a73fb090b86?q=80&w=1677&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    aspectRatio: 'landscape',
+    isSold: false
+  },
+  {
     id: "p1",
     name: { en: "Honda Type R - Moonlight Relief", ro: "Honda Type R - Relief de Noapte" },
     description: { 
@@ -36,16 +48,59 @@ export const PRODUCTS: Product[] = [
     image: "https://i.ibb.co/xtKG1Bg1/p1.png"
   },
   {
-    id: "p2",
-    name: { en: "BMW X6 Silver Splatter", ro: "BMW X6 Silver Splatter" },
+    id: "p7",
+    name: { en: "Crimson Supercar - Abstract Red", ro: "Supercar Crimson - Roșu Abstract" },
     description: { 
-        en: "Dynamic silver BMW X6 scale model centered on a dark grey canvas with energetic splatters in ruby red, emerald green, and gold.", 
-        ro: "Model la scară BMW X6 argintiu dinamic centrat pe o pânză gri închis cu stropi energetici în roșu rubin, verde smarald și aur." 
+        en: "A vivid red Italian-style supercar soaring through an abstract explosion of scarlet and crimson textures.", 
+        ro: "Un supercar în stil italian de un roșu aprins, trecând printr-o explozie abstractă de texturi stacojii și purpurii." 
     },
     category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1771320251705-9a73fb090b86?q=80&w=1677&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    aspectRatio: 'landscape',
-    isSold: false // User requested to remove SOLD from BMW
+    image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128521_1920.png",
+    aspectRatio: 'landscape'
+  },
+  {
+    id: "p8",
+    name: { en: "Golden GT - Solar Surge", ro: "GT Auriu - Val Solar" },
+    description: { 
+        en: "The silhouette of a yellow GT supercar captured amidst a dynamic flow of golden and ocher paint strokes.", 
+        ro: "Silueta unui supercar GT galben capturată în mijlocul unui flux dinamic de pensulații aurii și ocru." 
+    },
+    category: Category.AUTOMOTIVE,
+    image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128520_1920.png",
+    aspectRatio: 'landscape'
+  },
+  {
+    id: "p9",
+    name: { en: "Emerald GT - Forest Flow", ro: "GT Smarald - Flux Forestier" },
+    description: { 
+        en: "A sleek green Porsche-inspired design emerging from a lush, textured background of deep emerald and forest green.", 
+        ro: "Un design elegant de inspirație Porsche, de culoare verde, ce emerge dintr-un fundal texturat bogat în nuanțe de smarald și verde pădure." 
+    },
+    category: Category.AUTOMOTIVE,
+    image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128523_1920.png",
+    aspectRatio: 'landscape'
+  },
+  {
+    id: "p10",
+    name: { en: "Cobalt Racer - Electric Blue", ro: "Cobalt Racer - Albastru Electric" },
+    description: { 
+        en: "High-speed energy depicted through a blue racer silhouette cutting through vibrant cobalt and sapphire textures.", 
+        ro: "Energia vitezei mari reprezentată printr-o siluetă de mașină de curse albastră ce taie prin texturi vibrante de cobalt și safir." 
+    },
+    category: Category.AUTOMOTIVE,
+    image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128524_1920.png",
+    aspectRatio: 'landscape'
+  },
+  {
+    id: "p11",
+    name: { en: "Silver Phantom - Grey Scale", ro: "Silver Phantom - Scară Gri" },
+    description: { 
+        en: "A sophisticated silver-grey supercar design set against a monochromatic abstract landscape of metallic textures.", 
+        ro: "Un design sofisticat de supercar gri-argintiu așezat pe un peisaj abstract monocrom de texturi metalice." 
+    },
+    category: Category.AUTOMOTIVE,
+    image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128525_1920.png",
+    aspectRatio: 'landscape'
   },
   {
     id: "p3",
@@ -79,7 +134,7 @@ export const PRODUCTS: Product[] = [
     image: "https://i.ibb.co/V07NcqS9/p5.png"
   },
 
-  // --- 9 FIGURINES ---
+  // --- FIGURINES ---
   {
     id: "f1",
     name: { en: "The Mesh Guardian Angel", ro: "Îngerul Păzitor din Plasă" },
@@ -201,7 +256,8 @@ export const TRANSLATIONS: Translations = {
   cat_all: { en: "All", ro: "Toate" },
   cat_automotive: { en: "Automotive Art", ro: "Artă Auto" },
   cat_figurines: { en: "Metal Figurines", ro: "Figurine Metalice" },
-  sold: { en: "SOLD", ro: "VÂNDUT" }
+  sold: { en: "SOLD", ro: "VÂNDUT" },
+  bio_label: { en: "Behind the Iron", ro: "Dincolo de Fier" }
 };
 
 export const Icons = {
