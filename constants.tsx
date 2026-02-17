@@ -16,24 +16,24 @@ export const PRODUCTS: Product[] = [
   // --- PAINTINGS ---
   {
     id: "p6",
-    name: { en: "Porsche 911 - Azure Velocity", ro: "Porsche 911 - Viteza Azurului" },
+    name: { en: "Drum în Vălvătăi", ro: "Drum în Vălvătăi" },
     description: { 
-        en: "A striking cobalt blue Porsche 911 silhouette emerging from a sea of textured cerulean and titanium white paint, capturing the raw essence of aerodynamic form and speed.", 
-        ro: "O siluetă izbitoare de Porsche 911 albastru cobalt ce emerge dintr-o mare de vopsea texturată în nuanțe de cerulean și alb titan, capturând esența pură a formei aerodinamice și a vitezei." 
+        en: "An original mixed media work with 3D elements created in 2026. The piece features a red Renault on a dangerous road symbolized by lava traces, representing a challenge. It is a unique, hand-painted artwork.", 
+        ro: "O lucrare originală mixtă cu elemente 3D creată în 2026. Piesa reprezintă un Renault roșu pe un drum periculos simbolizat prin urme de lavă, sugerând o provocare. Este o operă de artă unică, pictată manual." 
     },
     category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1771320251692-acfb68154ad6?q=80&w=1568&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128523_1920.png",
     aspectRatio: 'landscape'
   },
   {
     id: "p2",
-    name: { en: "BMW X6 Silver Splatter", ro: "BMW X6 Silver Splatter" },
+    name: { en: "BMW X6", ro: "BMW X6" },
     description: { 
-        en: "Dynamic silver BMW X6 scale model centered on a dark grey canvas with energetic splatters in ruby red, emerald green, and gold.", 
-        ro: "Model la scară BMW X6 argintiu dinamic centrat pe o pânză gri închis cu stropi energetici în roșu rubin, verde smarald și aur." 
+        en: "An original work created in a modern abstract style, depicting a small BMW X6 against an abstract background. The artwork utilizes rotation and dripping techniques with gray, green, red, and gold to convey dynamism.", 
+        ro: "O lucrare originală creată într-un stil abstract modern, înfățișând un mic BMW X6 pe un fundal abstract. Opera utilizează tehnici de rotație și picurare cu gri, verde, roșu și aur pentru a transmite dinamism." 
     },
     category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1771320251705-9a73fb090b86?q=80&w=1677&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128524_1920.png",
     aspectRatio: 'landscape',
     isSold: false
   },
@@ -49,10 +49,10 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "p7",
-    name: { en: "Crimson Supercar - Abstract Red", ro: "Supercar Crimson - Roșu Abstract" },
+    name: { en: "Aripi pentru Drumul Interior", ro: "Aripi pentru Drumul Interior" },
     description: { 
-        en: "A vivid red Italian-style supercar soaring through an abstract explosion of scarlet and crimson textures.", 
-        ro: "Un supercar în stil italian de un roșu aprins, trecând printr-o explozie abstractă de texturi stacojii și purpurii." 
+        en: "An original, unique work created in 2026 using mixed techniques on a rigid support with integrated three-dimensional elements. Features a red car set within a winged style composition.", 
+        ro: "O lucrare originală, unică, creată în 2026 folosind tehnici mixte pe suport rigid cu elemente tridimensionale integrate. Include o mașină roșie într-o compoziție cu aripi." 
     },
     category: Category.AUTOMOTIVE,
     image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128521_1920.png",
@@ -60,10 +60,10 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "p8",
-    name: { en: "Golden GT - Solar Surge", ro: "GT Auriu - Val Solar" },
+    name: { en: "Îngeri Protectori", ro: "Îngeri Protectori" },
     description: { 
-        en: "The silhouette of a yellow GT supercar captured amidst a dynamic flow of golden and ocher paint strokes.", 
-        ro: "Silueta unui supercar GT galben capturată în mijlocul unui flux dinamic de pensulații aurii și ocru." 
+        en: "Created using materials such as acrylic and sculptural clay, this piece took 36 hours to complete. It features a winged artwork presented in a timeless vintage style.", 
+        ro: "Creată folosind materiale precum acrilic și lut sculptural, această piesă a necesitat 36 de ore de muncă. Reprezintă o operă cu aripi prezentată într-un stil vintage atemporal." 
     },
     category: Category.AUTOMOTIVE,
     image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128520_1920.png",
@@ -104,20 +104,20 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "p3",
-    name: { en: "Industrial Yellow Bicycle", ro: "Bicicleta Galbenă Industrială" },
+    name: { en: "Introspecție Urbană", ro: "Introspecție Urbană" },
     description: { 
-        en: "An intricate yellow miniature bicycle poised against a rich, dark background flowing with metallic gold and deep black textures.", 
-        ro: "O bicicletă galbenă miniaturală complexă așezată pe un fundal întunecat și bogat, cu texturi de aur metalic și negru profund." 
+        en: "A contemporary mixed technique work titled 'Momentum' containing 3D elements. Reflects movement, balance, and personal progress through a yellow bicycle against an abstract black background.", 
+        ro: "O lucrare contemporană cu tehnică mixtă intitulată 'Momentum', conținând elemente 3D. Reflectă mișcarea, echilibrul și progresul personal printr-o bicicletă galbenă pe un fundal negru abstract." 
     },
     category: Category.AUTOMOTIVE,
     image: "https://i.ibb.co/zhxWLSjh/p3.png"
   },
   {
     id: "p4",
-    name: { en: "Mercedes G-Class 'BANIER'", ro: "Mercedes G-Class 'BANIER'" },
+    name: { en: "BANIER", ro: "BANIER" },
     description: { 
-        en: "A black Mercedes G-Class scale model set against an expressive abstract background of red and green strokes with bold 'BANIER' industrial lettering.", 
-        ro: "Un model la scară Mercedes G-Class negru așezat pe un fundal abstract expresiv de pensulații roșii și verzi, cu inscripția industrială 'BANIER'." 
+        en: "An original artwork in a modern abstract style that blends various materials and colors (red, green, black, gold) to present a sense of strength. Features car elements and the 'BANIER' inscription.", 
+        ro: "O lucrare originală într-un stil abstract modern care îmbină diverse materiale și culori (roșu, verde, negru, aur) pentru a prezenta forță. Include elemente auto și inscripția 'BANIER'." 
     },
     category: Category.AUTOMOTIVE,
     image: "https://i.ibb.co/NnnTSQhq/p4.png",
@@ -125,13 +125,14 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "p5",
-    name: { en: "G-Class White Arc Drift", ro: "G-Class Drift Arc Alb" },
+    name: { en: "Mercedes G", ro: "Mercedes G" },
     description: { 
-        en: "The ultimate representation of power: a black G-Wagon appearing to drift with a massive, 3D-textured white paint arc simulating high-speed energy.", 
-        ro: "Reprezentarea supremă a puterii: un model G-Wagon negru ce pare să facă drift cu un arc masiv de vopsea albă texturată 3D, simulând energia vitezei." 
+        en: "An original painting presented in a modern texture style. It combines a 3D vehicle with impasto techniques, using black, white, and bronze to merge realism with dynamic abstraction.", 
+        ro: "O pictură originală prezentată într-un stil cu textură modernă. Combină un vehicul 3D cu tehnici impasto, folosind negru, alb și bronz pentru a îmbina realismul cu abstracția dinamică." 
     },
     category: Category.AUTOMOTIVE,
-    image: "https://i.ibb.co/V07NcqS9/p5.png"
+    image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128525_1920.png",
+    aspectRatio: 'landscape'
   },
 
   // --- FIGURINES ---
