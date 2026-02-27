@@ -102,17 +102,6 @@ export const PRODUCTS: Product[] = [
     category: Category.AUTOMOTIVE,
     image: "https://i.ibb.co/zhxWLSjh/p3.png"
   },
-  {
-    id: "p4",
-    name: { en: "BANIER", ro: "BANIER" },
-    description: { 
-        en: "An original artwork in a modern abstract style that blends various materials and colors (red, green, black, gold) to present a sense of strength and fusion. The piece features car elements and the 'BANIER' inscription.", 
-        ro: "O lucrare originală într-un stil abstract modern care îmbină diverse materiale și culori (roșu, verde, negru, aur) pentru a prezenta forță și fuziune. Include elemente auto și inscripția 'BANIER'." 
-    },
-    category: Category.AUTOMOTIVE,
-    image: "https://i.ibb.co/NnnTSQhq/p4.png",
-    isSold: true
-  },
 
   // --- FIGURINES ---
   {
