@@ -14,7 +14,7 @@ const ArtistBio: React.FC = () => {
           <div className="relative">
             <div className="aspect-[3/4] md:aspect-square bg-slate-200 overflow-hidden relative z-10 shadow-2xl">
               <img 
-                src="https://i.ibb.co/ZRkjPvXC/george.png" 
+                src="https://i.ibb.co/67qSS9k1/image-1.jpg" 
                 alt="Artist Băbău George Cosmin" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
