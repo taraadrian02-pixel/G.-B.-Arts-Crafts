@@ -2,7 +2,7 @@
 export type Language = 'en' | 'ro';
 
 export enum Category {
-  AUTOMOTIVE = 'Automotive Art',
+  PAINTINGS = 'Paintings',
   FIGURINES = 'Metal Figurines'
 }
 

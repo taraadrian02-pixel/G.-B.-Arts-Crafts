@@ -36,7 +36,7 @@ export const Icons = {
 };
 
 export const PRODUCTS: Product[] = [
-  // --- PAINTINGS (AUTOMOTIVE ART) ---
+  // --- PAINTINGS ---
   {
     id: "p8",
     name: { en: "Îngeri Protectori", ro: "Îngeri Protectori" },
@@ -44,7 +44,7 @@ export const PRODUCTS: Product[] = [
         en: "Created using materials such as acrylic and sculptural clay, this piece took 36 hours to complete. It features a winged artwork presented in a vintage style.", 
         ro: "Creată folosind materiale precum acrilic și lut sculptural, această piesă a necesitat 36 de ore de muncă. Reprezintă o operă cu aripi prezentată într-un stil vintage." 
     },
-    category: Category.AUTOMOTIVE,
+    category: Category.PAINTINGS,
     image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128520_1920.png",
     aspectRatio: 'landscape'
   },
@@ -55,7 +55,7 @@ export const PRODUCTS: Product[] = [
         en: "A sleek green supercar design emerging from a lush, textured background of deep emerald and forest green.", 
         ro: "Un design elegant de supercar verde ce emerge dintr-un fundal texturat bogat în nuanțe de smarald și verde pădure." 
     },
-    category: Category.AUTOMOTIVE,
+    category: Category.PAINTINGS,
     image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128523_1920.png",
     aspectRatio: 'landscape'
   },
@@ -66,7 +66,7 @@ export const PRODUCTS: Product[] = [
         en: "High-speed energy depicted through a blue racer silhouette cutting through vibrant cobalt and sapphire textures.", 
         ro: "Energia vitezei mari reprezentată printr-o siluetă de mașină de curse albastră ce taie prin texturi vibrante de cobalt și safir." 
     },
-    category: Category.AUTOMOTIVE,
+    category: Category.PAINTINGS,
     image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128524_1920.png",
     aspectRatio: 'landscape'
   },
@@ -77,7 +77,7 @@ export const PRODUCTS: Product[] = [
         en: "A sophisticated silver-grey supercar design set against a monochromatic abstract landscape of metallic textures.", 
         ro: "Un design sofisticat de supercar gri-argintiu așezat pe un peisaj abstract monocrom de texturi metalice." 
     },
-    category: Category.AUTOMOTIVE,
+    category: Category.PAINTINGS,
     image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128525_1920.png",
     aspectRatio: 'landscape'
   },
@@ -88,7 +88,7 @@ export const PRODUCTS: Product[] = [
         en: "A contemporary mixed technique work titled 'Momentum' containing 3D elements. Created in 2026 with a 24-hour production time, the theme reflects movement, balance, and personal progress. It features an abstract composition with a yellow bicycle against a black background.", 
         ro: "O lucrare contemporană cu tehnică mixtă intitulată 'Momentum', conținând elemente 3D. Creată în 2026 cu un timp de producție de 24 de ore, tema reflectă mișcarea, echilibrul și progresul personal. Include o bicicletă galbenă pe un fundal negru abstract." 
     },
-    category: Category.AUTOMOTIVE,
+    category: Category.PAINTINGS,
     image: "https://i.ibb.co/zhxWLSjh/p3.png"
   },
 
@@ -191,7 +191,7 @@ export const TRANSLATIONS: Translations = {
   nav_bio: { en: "The Artist", ro: "Artistul" },
   nav_contact: { en: "Contact", ro: "Contact" },
   hero_title: { en: "Where Metal Meets Passion", ro: "Unde Metalul Întâlnește Pasiunea" },
-  hero_subtitle: { en: "Handcrafted automotive art and metal sculptures that redefine industrial beauty.", ro: "Artă auto lucrată manual și sculpturi metalice care definesc frumusețea industrială." },
+  hero_subtitle: { en: "Handcrafted paintings and metal sculptures that redefine industrial beauty.", ro: "Picturi lucrate manual și sculpturi metalice care definesc frumusețea industrială." },
   shop_now: { en: "Request Works", ro: "Solicită Lucrări" },
   add_to_cart: { en: "Add to Request", ro: "Adaugă la Cerere" },
   cart_title: { en: "Requested Items", ro: "Produse Solicitate" },
@@ -202,11 +202,11 @@ export const TRANSLATIONS: Translations = {
   contact_us: { en: "Contact Us", ro: "Contactează-ne" },
   send_message: { en: "Send Message", ro: "Trimite Mesaj" },
   footer_text: { 
-    en: "Unique hand-welded steel sculptures and mixed media automotive art inspired by a divine vision.", 
-    ro: "Sculpturi unice din oțel sudat manual și artă auto mixtă inspirată de o viziune divină." 
+    en: "Unique hand-welded steel sculptures and mixed media paintings inspired by a divine vision.", 
+    ro: "Sculpturi unice din oțel sudat manual și picturi mixte inspirate de o viziune divină." 
   },
   cat_all: { en: "All Works", ro: "Toate Lucrările" },
-  cat_automotive: { en: "Automotive Art", ro: "Artă Auto" },
+  cat_automotive: { en: "Paintings", ro: "Picturi" },
   cat_figurines: { en: "Metal Figurines", ro: "Figurine Metal" },
   collection_label: { en: "The Collection", ro: "Colecția" },
   featured_works: { en: "Featured Works", ro: "Lucrări Reprezentative" },

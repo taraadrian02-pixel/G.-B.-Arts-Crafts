@@ -36,7 +36,7 @@ const GalleryContent: React.FC = () => {
 
   const categories = [
     { id: 'All', label: t('cat_all') },
-    { id: Category.AUTOMOTIVE, label: t('cat_automotive') },
+    { id: Category.PAINTINGS, label: t('cat_automotive') },
     { id: Category.FIGURINES, label: t('cat_figurines') }
   ];
 

@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1">
             <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-6">Gallery</h4>
             <ul className="space-y-4 text-sm">
-              <li><button onClick={() => scrollTo('gallery', Category.AUTOMOTIVE)} className="hover:text-white transition-colors">Automotive Art</button></li>
+              <li><button onClick={() => scrollTo('gallery', Category.PAINTINGS)} className="hover:text-white transition-colors">{t('cat_automotive')}</button></li>
               <li><button onClick={() => scrollTo('gallery', Category.FIGURINES)} className="hover:text-white transition-colors">Metal Figurines</button></li>
               <li><button onClick={() => scrollTo('contact')} className="hover:text-white transition-colors">Custom Commissions</button></li>
             </ul>

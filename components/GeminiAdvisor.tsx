@@ -24,7 +24,7 @@ const GeminiAdvisor: React.FC = () => {
       // Fix: Removed 'p.price' which was causing a TypeScript error as it doesn't exist on the Product type.
       const productSummary = PRODUCTS.map(p => `- ${p.name.en}: ${p.description.en}`).join('\n');
       
-      const systemInstruction = `You are an art advisor for G. B. Arts&Crafts, an elite metal sculpture and automotive art gallery. 
+      const systemInstruction = `You are an art advisor for G. B. Arts&Crafts, an elite metal sculpture and paintings gallery. 
       Help the customer decide what to buy based on their interests. 
       Respond in ${language === 'en' ? 'English' : 'Romanian'}. 
       Our current collection includes:\n${productSummary}\n

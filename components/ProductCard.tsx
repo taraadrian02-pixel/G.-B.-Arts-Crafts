@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Product } from '../types';
+import { Product, Category } from '../types';
 import { useApp } from '../context/AppContext';
 import { TRANSLATIONS, Icons } from '../constants';
 
@@ -94,7 +94,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
           <div className="flex justify-between items-center">
             <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">
-              {product.category}
+              {product.category === Category.PAINTINGS ? t('cat_automotive') : t('cat_figurines')}
             </p>
             {product.isSold && (
               <span className="text-[10px] text-red-600 font-bold uppercase tracking-widest">
@@ -127,7 +127,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <div className="w-full md:w-[400px] p-8 md:p-12 flex flex-col justify-between bg-white overflow-y-auto">
               <div>
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-4 block">
-                  {product.category}
+                  {product.category === Category.PAINTINGS ? t('cat_automotive') : t('cat_figurines')}
                 </span>
                 <h2 className="text-3xl font-bold text-slate-900 mb-2 font-serif">
                   {product.name[language]}
