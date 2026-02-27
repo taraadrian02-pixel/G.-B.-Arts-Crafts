@@ -9,7 +9,7 @@ const Spotlight: React.FC = () => {
     <section className="relative h-[60vh] md:h-[80vh] w-full bg-slate-900 overflow-hidden flex items-center justify-center">
       <div className="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1771320251692-acfb68154ad6?q=80&w=1568&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          src="https://i.ibb.co/NnnTSQhq/p4.png" 
           alt="Artisan Detail" 
           className="w-full h-full object-cover opacity-80"
         />

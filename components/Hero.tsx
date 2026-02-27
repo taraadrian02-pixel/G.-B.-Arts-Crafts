@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
     <div className="relative h-[85vh] w-full overflow-hidden bg-slate-900">
       <div className="absolute inset-0">
         <img 
-          src="https://i.ibb.co/V07NcqS9/p5.png" 
+          src="https://i.ibb.co/zhxWLSjh/p3.png" 
           alt="G.B. Arts & Crafts Studio"
           onError={(e) => {
             (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=1920&grayscale=true";

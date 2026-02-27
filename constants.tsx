@@ -38,39 +38,6 @@ export const Icons = {
 export const PRODUCTS: Product[] = [
   // --- PAINTINGS (AUTOMOTIVE ART) ---
   {
-    id: "p6",
-    name: { en: "Drum în Vălvătăi", ro: "Drum în Vălvătăi" },
-    description: { 
-        en: "An original mixed media work with 3D elements created in 2026. The piece features a red car (Renault) on a dangerous road symbolized by lava traces, representing a challenge. It is a unique, hand-painted artwork.", 
-        ro: "O lucrare originală mixtă cu elemente 3D creată în 2026. Piesa reprezintă un Renault roșu pe un drum periculos simbolizat prin urme de lavă, sugerând o provocare. Este o operă de artă unică, pictată manual." 
-    },
-    category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1771320251692-acfb68154ad6?q=80&w=1568&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    aspectRatio: 'landscape'
-  },
-  {
-    id: "p2",
-    name: { en: "BMW X6", ro: "BMW X6" },
-    description: { 
-        en: "An original work created in a modern abstract style, depicting a small BMW X6 against an abstract background. The artwork utilizes rotation and dripping techniques with colors—gray, green, red, and gold—to convey a sense of dynamism and energy.", 
-        ro: "O lucrare originală creată într-un stil abstract modern, înfățișând un mic BMW X6 pe un fundal abstract. Opera utilizează tehnici de rotație și picurare cu nuanțe de gri, verde, roșu și aur pentru a transmite dinamism și energie." 
-    },
-    category: Category.AUTOMOTIVE,
-    image: "https://images.unsplash.com/photo-1771320251705-9a73fb090b86?q=80&w=1677&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    aspectRatio: 'landscape',
-    isSold: false
-  },
-  {
-    id: "p1",
-    name: { en: "Honda Type R - Moonlight Relief", ro: "Honda Type R - Relief de Noapte" },
-    description: { 
-        en: "A deep blue Honda Type R model scaling a meticulously crafted brown mountain relief under a hand-applied gold-leaf moon.", 
-        ro: "Un model Honda Type R albastru închis urcând un relief montan maro lucrat meticulos sub o lună din foiță de aur." 
-    },
-    category: Category.AUTOMOTIVE,
-    image: "https://i.ibb.co/xtKG1Bg1/p1.png"
-  },
-  {
     id: "p7",
     name: { en: "Aripi pentru Drumul Interior", ro: "Aripi pentru Drumul Interior" },
     description: { 
@@ -145,17 +112,6 @@ export const PRODUCTS: Product[] = [
     category: Category.AUTOMOTIVE,
     image: "https://i.ibb.co/NnnTSQhq/p4.png",
     isSold: true
-  },
-  {
-    id: "p5",
-    name: { en: "Mercedes G", ro: "Mercedes G" },
-    description: { 
-        en: "An original oil painting presented in a modern texture style. It combines a 3D vehicle with impasto techniques, using black, white, and bronze as primary colors. The work merges realism with dynamic abstraction to convey a sense of power.", 
-        ro: "O pictură în ulei originală prezentată într-un stil cu textură modernă. Combină un vehicul 3D cu tehnici impasto, folosind negru, alb și bronz ca nuanțe primare. Opera îmbină realismul cu abstracția dinamică pentru a transmite putere." 
-    },
-    category: Category.AUTOMOTIVE,
-    image: "https://i.ibb.co/V07NcqS9/p5.png",
-    aspectRatio: 'landscape'
   },
 
   // --- FIGURINES ---
@@ -280,7 +236,7 @@ export const TRANSLATIONS: Translations = {
   bio_label: { en: "Heritage", ro: "Moștenire" },
   bio_title: { en: "The Vision of Băbău George Cosmin", ro: "Viziunea lui Băbău George Cosmin" },
   bio_content: { 
-    en: "The artistic journey of Băbău George Cosmin is not one that began in a classroom or a studio, but with a divine vision. In 2023, a dream changed the course of his life: God appeared to him and delivered a clear, profound command—to create an Angel and an Arc made of steel. At the time, he possessed no knowledge of welding. He had never held a torch, never fused two pieces of metal. Yet, compelled by the vision, he obeyed. The very next day, he acquired a welding station. What happened next can only be described as a miracle. As if guided by a force beyond himself, he began to weld with the confidence and skill of a lifelong master. It was as if the knowledge had been placed directly into his hands. This supernatural spark ignited a profound passion for creation. From that moment of divine intervention, his abilities expanded beyond welding into sculpting and painting. Today, every piece he creates—whether a 3D relief or a mixed media painting like 'Honda Type R'—carries the echo of that first miracle. His work is not just art; it is the physical manifestation of a calling, a testament to talent that was given, not learned.",
+    en: "The artistic journey of Băbău George Cosmin is not one that began in a classroom or a studio, but with a divine vision. In 2023, a dream changed the course of his life: God appeared to him and delivered a clear, profound command—to create an Angel and an Arc made of steel. At the time, he possessed no knowledge of welding. He had never held a torch, never fused two pieces of metal. Yet, compelled by the vision, he obeyed. The very next day, he acquired a welding station. What happened next can only be described as a miracle. As if guided by a force beyond himself, he began to weld with the confidence and skill of a lifelong master. It was as if the knowledge had been placed directly into his hands. This supernatural spark ignited a profound passion for creation. From that moment of divine intervention, his abilities expanded beyond welding into sculpting and painting. Today, every piece he creates—whether a 3D relief or a mixed media painting—carries the echo of that first miracle. His work is not just art; it is the physical manifestation of a calling, a testament to talent that was given, not learned.",
     ro: "Călătoria artistică a lui Băbău George Cosmin nu a început într-o sală de clasă sau într-un studio, ci cu o viziune divină. În 2023, un vis a schimbat cursul vieții sale: Dumnezeu i s-a arătat și i-a dat o poruncă clară și profundă – să creeze un Înger și un Arc din oțel. La acel moment, nu avea nicio cunoștință despre sudură. Nu ținuse niciodată un aparat de sudură în mână, nu fuzionase niciodată două bucăți de metal. Cu toate acestea, mânat de viziune, s-a supus. Chiar a doua zi, și-a achiziționat un post de sudură. Ceea ce s-a întâmplat în continuare poate fi descris doar ca un miracol. Ca și cum ar fi fost ghidat de o forță superioară, a început să sudeze cu încrederea și îndemânarea unui maestru de o viață. Această scânteie supranaturală a aprins o pasiune profundă pentru creație. De la acel moment de intervenție divină, abilitățile sale s-au extins dincolo de sudură, în sculptură și pictură. Astăzi, fiecare piesă pe care o creează poartă ecoul acelui prim miracol. Munca sa nu este doar artă; este manifestarea fizică a unei chemări, un testament al talentului care a fost dăruit, nu învățat."
   }
 };
