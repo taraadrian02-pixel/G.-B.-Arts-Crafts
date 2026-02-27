@@ -38,17 +38,6 @@ export const Icons = {
 export const PRODUCTS: Product[] = [
   // --- PAINTINGS (AUTOMOTIVE ART) ---
   {
-    id: "p7",
-    name: { en: "Aripi pentru Drumul Interior", ro: "Aripi pentru Drumul Interior" },
-    description: { 
-        en: "An original, unique work created in 2026. It utilizes mixed techniques on a rigid support with integrated three-dimensional elements. The artwork features a red car set within a winged style composition against a colorful background.", 
-        ro: "O lucrare originală, unică, creată în 2026. Utilizează tehnici mixte pe suport rigid cu elemente tridimensionale integrate. Opera prezintă o mașină roșie așezată într-o compoziție stil aripi pe un fundal colorat." 
-    },
-    category: Category.AUTOMOTIVE,
-    image: "https://pixabay.com/images/download/u_1916vmqe0b-image-10128521_1920.png",
-    aspectRatio: 'landscape'
-  },
-  {
     id: "p8",
     name: { en: "Îngeri Protectori", ro: "Îngeri Protectori" },
     description: { 
